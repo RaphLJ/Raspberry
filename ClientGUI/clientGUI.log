@@ -1,0 +1,29 @@
+2015-07-20 12:10:22,862 root         INFO     Demarrage application
+2015-07-20 12:10:25,267 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 12:10:28,774 root         DEBUG    Keyboard Pressed''(16)
+2015-07-20 12:10:29,025 root         DEBUG    Keyboard Pressed'Q'(81)
+2015-07-20 12:10:33,156 root         DEBUG    Keyboard Pressed'm'(77)
+2015-07-20 12:10:34,093 root         DEBUG    Keyboard Pressed''(16)
+2015-07-20 12:10:34,346 root         DEBUG    Keyboard Pressed'Q'(81)
+2015-07-20 12:10:35,120 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 12:11:15,421 root         INFO     Demarrage application
+2015-07-20 12:11:17,676 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 12:12:19,173 root         INFO     Demarrage application
+2015-07-20 12:12:20,803 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 12:12:20,803 root         DEBUG    I want to QUIT !
+2015-07-20 15:15:28,824 root         INFO     Demarrage application
+2015-07-20 15:15:56,221 root         INFO     Demarrage application
+2015-07-20 15:16:11,382 root         INFO     Demarrage application
+2015-07-20 15:17:44,588 root         INFO     Demarrage application
+2015-07-20 15:19:31,775 root         INFO     Demarrage application
+2015-07-20 15:19:52,796 root         ERROR    La connection au serveur a echoue : <class 'OSError'>
+2015-07-20 15:21:24,480 root         DEBUG    Keyboard Pressed''(16)
+2015-07-20 15:21:24,727 root         DEBUG    Keyboard Pressed'P'(80)
+2015-07-20 15:21:25,587 root         DEBUG    Keyboard Pressed''(16)
+2015-07-20 15:21:25,982 root         DEBUG    Keyboard Pressed'P'(80)
+2015-07-20 15:21:27,294 root         DEBUG    Keyboard Pressed'p'(80)
+2015-07-20 15:21:28,801 root         DEBUG    Button Stop Click
+2015-07-20 15:29:52,970 root         INFO     Demarrage application
+2015-07-20 15:30:14,006 root         ERROR    La connection au serveur a echoue : <member 'strerror' of 'OSError' objects>
+2015-07-20 15:30:24,453 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 15:30:24,453 root         DEBUG    I want to QUIT !
