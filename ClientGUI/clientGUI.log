@@ -27,3 +27,25 @@
 2015-07-20 15:30:14,006 root         ERROR    La connection au serveur a echoue : <member 'strerror' of 'OSError' objects>
 2015-07-20 15:30:24,453 root         DEBUG    Keyboard Pressed'q'(81)
 2015-07-20 15:30:24,453 root         DEBUG    I want to QUIT !
+2015-07-20 15:52:33,360 root         INFO     Demarrage application
+2015-07-20 15:52:54,399 root         ERROR    La connection au serveur a echoue : <member 'strerror' of 'OSError' objects>
+2015-07-20 15:53:02,401 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 15:53:02,401 root         DEBUG    I want to QUIT !
+2015-07-20 15:54:13,743 root         INFO     Demarrage application
+2015-07-20 15:54:13,750 root         DEBUG    La connection au serveur est etablie
+2015-07-20 15:54:30,903 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 15:54:30,903 root         DEBUG    I want to QUIT !
+2015-07-20 15:57:54,047 root         INFO     Demarrage application
+2015-07-20 15:57:54,057 root         DEBUG    La connection au serveur est etablie
+2015-07-20 15:58:01,062 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 15:58:01,062 root         DEBUG    I want to QUIT !
+2015-07-20 15:59:06,981 root         INFO     Demarrage application
+2015-07-20 15:59:06,991 root         DEBUG    La connection au serveur est etablie
+2015-07-20 15:59:09,916 root         DEBUG    Keyboard Pressed'q'(81)
+2015-07-20 15:59:09,916 root         DEBUG    I want to QUIT !
+2015-07-20 16:23:42,999 root         INFO     Demarrage application
+2015-07-20 16:23:43,006 root         DEBUG    La connection au serveur est etablie
+2015-07-20 16:28:40,736 root         INFO     Demarrage application
+2015-07-20 16:28:40,744 root         DEBUG    La connection au serveur est etablie
+2015-07-20 16:32:13,858 root         INFO     Demarrage application
+2015-07-20 16:32:13,867 root         DEBUG    La connection au serveur est etablie

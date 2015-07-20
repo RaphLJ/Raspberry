@@ -2,9 +2,11 @@ __author__ = 'Raphael'
 
 from tkinter import *
 import logging
+import Client
 
 def buttonleftclick():
     logging.debug("Button Left Click")
+    Client.sendMessage("Left")
 
 def buttonrightclick():
     logging.debug("Button Right Click")
@@ -29,7 +31,6 @@ def keyboardpressed(event):
     if event.keycode==81:
         logging.debug("I want to QUIT !")
         exit()
-
 
 master = Tk()
 
