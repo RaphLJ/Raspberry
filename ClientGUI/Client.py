@@ -6,8 +6,12 @@ import GUI
 import socket
 from sys import *
 
+def bclick(event):
+    logging.debug('bclick')
+    sendMessage('LEFT')
+
 def sendMessage(message):
-    message_encode = message.encode("utf8")
+    message_encode = message.encode("utf_8")
     logging.debug(message_encode)
     mySocket.send(message_encode)
 
@@ -29,5 +33,5 @@ except socket.error:
     logging.error('La connection au serveur a echoue : ' + str(socket.error.strerror))
 
 
-
+GUI.buttonleft.bind("<Button-1>",bclick)
 GUI.mainloop()

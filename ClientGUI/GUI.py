@@ -2,11 +2,10 @@ __author__ = 'Raphael'
 
 from tkinter import *
 import logging
-import Client
 
 def buttonleftclick():
     logging.debug("Button Left Click")
-    Client.sendMessage("Left")
+    #Client.sendMessage("Left")
 
 def buttonrightclick():
     logging.debug("Button Right Click")
@@ -39,7 +38,7 @@ frame.bind("<Key>", keyboardpressed)
 frame.pack()
 frame.focus_set()
 
-buttonleft = Button(frame, text="Left", command=buttonleftclick)
+buttonleft = Button(frame, text="Left")
 buttonleft.grid(row=2, column=1)
 
 buttonleft.bind("<Button-1>", buttonleftpressed)

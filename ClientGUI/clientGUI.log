@@ -1,51 +1,5 @@
-2015-07-20 12:10:22,862 root         INFO     Demarrage application
-2015-07-20 12:10:25,267 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 12:10:28,774 root         DEBUG    Keyboard Pressed''(16)
-2015-07-20 12:10:29,025 root         DEBUG    Keyboard Pressed'Q'(81)
-2015-07-20 12:10:33,156 root         DEBUG    Keyboard Pressed'm'(77)
-2015-07-20 12:10:34,093 root         DEBUG    Keyboard Pressed''(16)
-2015-07-20 12:10:34,346 root         DEBUG    Keyboard Pressed'Q'(81)
-2015-07-20 12:10:35,120 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 12:11:15,421 root         INFO     Demarrage application
-2015-07-20 12:11:17,676 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 12:12:19,173 root         INFO     Demarrage application
-2015-07-20 12:12:20,803 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 12:12:20,803 root         DEBUG    I want to QUIT !
-2015-07-20 15:15:28,824 root         INFO     Demarrage application
-2015-07-20 15:15:56,221 root         INFO     Demarrage application
-2015-07-20 15:16:11,382 root         INFO     Demarrage application
-2015-07-20 15:17:44,588 root         INFO     Demarrage application
-2015-07-20 15:19:31,775 root         INFO     Demarrage application
-2015-07-20 15:19:52,796 root         ERROR    La connection au serveur a echoue : <class 'OSError'>
-2015-07-20 15:21:24,480 root         DEBUG    Keyboard Pressed''(16)
-2015-07-20 15:21:24,727 root         DEBUG    Keyboard Pressed'P'(80)
-2015-07-20 15:21:25,587 root         DEBUG    Keyboard Pressed''(16)
-2015-07-20 15:21:25,982 root         DEBUG    Keyboard Pressed'P'(80)
-2015-07-20 15:21:27,294 root         DEBUG    Keyboard Pressed'p'(80)
-2015-07-20 15:21:28,801 root         DEBUG    Button Stop Click
-2015-07-20 15:29:52,970 root         INFO     Demarrage application
-2015-07-20 15:30:14,006 root         ERROR    La connection au serveur a echoue : <member 'strerror' of 'OSError' objects>
-2015-07-20 15:30:24,453 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 15:30:24,453 root         DEBUG    I want to QUIT !
-2015-07-20 15:52:33,360 root         INFO     Demarrage application
-2015-07-20 15:52:54,399 root         ERROR    La connection au serveur a echoue : <member 'strerror' of 'OSError' objects>
-2015-07-20 15:53:02,401 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 15:53:02,401 root         DEBUG    I want to QUIT !
-2015-07-20 15:54:13,743 root         INFO     Demarrage application
-2015-07-20 15:54:13,750 root         DEBUG    La connection au serveur est etablie
-2015-07-20 15:54:30,903 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 15:54:30,903 root         DEBUG    I want to QUIT !
-2015-07-20 15:57:54,047 root         INFO     Demarrage application
-2015-07-20 15:57:54,057 root         DEBUG    La connection au serveur est etablie
-2015-07-20 15:58:01,062 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 15:58:01,062 root         DEBUG    I want to QUIT !
-2015-07-20 15:59:06,981 root         INFO     Demarrage application
-2015-07-20 15:59:06,991 root         DEBUG    La connection au serveur est etablie
-2015-07-20 15:59:09,916 root         DEBUG    Keyboard Pressed'q'(81)
-2015-07-20 15:59:09,916 root         DEBUG    I want to QUIT !
-2015-07-20 16:23:42,999 root         INFO     Demarrage application
-2015-07-20 16:23:43,006 root         DEBUG    La connection au serveur est etablie
-2015-07-20 16:28:40,736 root         INFO     Demarrage application
-2015-07-20 16:28:40,744 root         DEBUG    La connection au serveur est etablie
-2015-07-20 16:32:13,858 root         INFO     Demarrage application
-2015-07-20 16:32:13,867 root         DEBUG    La connection au serveur est etablie
+2015-07-21 10:57:39,514 root         INFO     Demarrage application
+2015-07-21 10:57:39,522 root         DEBUG    La connection au serveur est etablie
+2015-07-21 10:57:41,036 root         DEBUG    bclick
+2015-07-21 10:57:41,036 root         DEBUG    b'LEFT'
+2015-07-21 10:57:41,116 root         DEBUG    Button Left Released

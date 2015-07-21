@@ -4,7 +4,8 @@ import logging
 import socket
 from sys import *
 
-logging.basicConfig(level=logging.DEBUG, format = '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+logging.basicConfig(level=logging.DEBUG,
+                    format = '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                     # datefmt='%y-%m-%d %H:%M:%S:%',
                     filename = 'server.log')
 
@@ -31,6 +32,7 @@ while 1:
 
     while 1:
         message_encode=connexion.recv(1024)
-        message=message_encode.decode("uft8")
-        logging.debug('Message recu : ' + message)
+        message=message_encode.decode("utf_8")
+        if len(message) != 0:
+            logging.debug('Message recu : ' + message)
 
