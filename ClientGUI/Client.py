@@ -6,14 +6,30 @@ import GUI
 import socket
 from sys import *
 
-def bclick(event):
-    logging.debug('bclick')
+def buttonleftclick(event):
+    logging.debug('Button LEFT click')
     sendMessage('LEFT')
+    
+def buttonrightclick(event):
+    logging.debug('Button RIGHT click')
+    sendMessage('RIGHT')
+    
+def buttonforwardclick(event):
+    logging.debug('Button FORWARD click')
+    sendMessage('FORWARD')
+    
+def buttonbackwardclick(event):
+    logging.debug('Button BACKWARD click')
+    sendMessage('BACKWARD')
+    
+def buttonstopclick(event):
+    logging.debug('Button STOP click')
+    sendMessage('STOP')
 
 def sendMessage(message):
     message_encode = message.encode("utf_8")
-    logging.debug(message_encode)
     mySocket.send(message_encode)
+    logging.debug("Message envoye : " + str(message_encode))
 
 logging.basicConfig(level=logging.DEBUG, format = '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                     # datefmt='%y-%m-%d %H:%M:%S:%',
@@ -33,5 +49,9 @@ except socket.error:
     logging.error('La connection au serveur a echoue : ' + str(socket.error.strerror))
 
 
-GUI.buttonleft.bind("<Button-1>",bclick)
+GUI.buttonleft.bind("<Button-1>",buttonleftclick)
+GUI.buttonright.bind("<Button-1>",buttonrightclick)
+GUI.buttonforward.bind("<Button-1>",buttonforwardclick)
+GUI.buttonbackward.bind("<Button-1>",buttonbackwardclick)
+GUI.buttonstop.bind("<Button-1>",buttonstopclick)
 GUI.mainloop()
