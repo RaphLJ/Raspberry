@@ -56,3 +56,9 @@ buttonbackward.grid(row=3, column=2)
 buttonstop = Button(frame, text="Stop")
 buttonstop.grid(row=2, column=2)
 
+buttonconnect = Button(frame, text="Connect")
+#buttonconnect["bg"]="red"
+buttonconnect.grid(row=4, column=2)
+
+buttontest = Button(frame, text="TEST")
+buttontest.grid(row=4, column=3)
