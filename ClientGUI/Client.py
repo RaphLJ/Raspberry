@@ -6,6 +6,9 @@ import GUI
 import socket
 from sys import *
 
+def noAction(event):
+    print("NO ACTION")
+    pass
 
 def buttonleftclick(event):
     logging.debug('Button LEFT click')
@@ -51,20 +54,57 @@ def buttonconnectclick(event):
 
 def connectSocket():
     global isSocketConnected
-    try:
-        mySocket.connect((HOST, PORT))
-        logging.debug('La connection au serveur est etablie')
-        isSocketConnected = True
-    except socket.error:
-        logging.error('La connection au serveur a echoue : ' + str(socket.error.strerror))
+    if isSocketConnected == False:
+        try:
+            mySocket.connect((HOST, PORT))
+            logging.debug('La connection au serveur est etablie')
+            isSocketConnected = True
+            enableButtons()
+        except socket.error:
+           logging.error('La connection au serveur a echoue : ' + str(socket.error.strerror))
+           isSocketConnected = False
+           disableButtons()
+    else:
+        mySocket.close()
         isSocketConnected = False
+        disableButtons()
+        logging.debug('La connection au serveur a ete interrompue')
 
 
 def sendMessage(message):
-    message_encode = message.encode("utf_8")
-    mySocket.send(message_encode)
-    logging.debug("Message envoye : " + str(message_encode))
+    global isSocketConnected
+    if isSocketConnected:
+        message_encode = message.encode("utf_8")
+        mySocket.send(message_encode)
+        logging.debug("Message envoye : " + str(message_encode))
+    else:
+        logging.debug("Ce message n'a pas ete envoye : " + str(message))
 
+def enableButtons():
+    GUI.buttonleft.bind("<Button-1>", buttonleftclick)
+    GUI.buttonright.bind("<Button-1>", buttonrightclick)
+    GUI.buttonforward.bind("<Button-1>", buttonforwardclick)
+    GUI.buttonbackward.bind("<Button-1>", buttonbackwardclick)
+    GUI.buttonstop.bind("<Button-1>", buttonstopclick)
+
+    GUI.buttonleft.config(state="normal")
+    GUI.buttonright.config(state="normal")
+    GUI.buttonforward.config(state="normal")
+    GUI.buttonbackward.config(state="normal")
+    GUI.buttonstop.config(state="normal")
+
+def disableButtons():
+    GUI.buttonleft.unbind("<Button-1>")
+    GUI.buttonright.unbind("<Button-1>")
+    GUI.buttonforward.unbind("<Button-1>")
+    GUI.buttonbackward.unbind("<Button-1>")
+    GUI.buttonstop.unbind("<Button-1>")
+
+    GUI.buttonleft.config(state="disabled")
+    GUI.buttonright.config(state="disabled")
+    GUI.buttonforward.config(state="disabled")
+    GUI.buttonbackward.config(state="disabled")
+    GUI.buttonstop.config(state="disabled")
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                     # datefmt='%y-%m-%d %H:%M:%S:%',
@@ -75,14 +115,11 @@ logging.info('Demarrage application')
 HOST = '192.168.1.100'  # IP Serveur
 PORT = 10000
 
+disableButtons()
+
 mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 isSocketConnected = False
 
-GUI.buttonleft.bind("<Button-1>", buttonleftclick)
-GUI.buttonright.bind("<Button-1>", buttonrightclick)
-GUI.buttonforward.bind("<Button-1>", buttonforwardclick)
-GUI.buttonbackward.bind("<Button-1>", buttonbackwardclick)
-GUI.buttonstop.bind("<Button-1>", buttonstopclick)
 GUI.buttonconnect.bind("<Button-1>", buttonconnectclick)
-GUI.buttontest.bind("<Button-1>", buttontestclick)
+
 GUI.mainloop()

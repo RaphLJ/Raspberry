@@ -23,9 +23,7 @@ except socket.error:
     exit()
 
 while 1:
-    logging.debug('Connection AVANT listen')
     mySocket.listen(2)
-    logging.debug('Connection APRES listen')
 
     connexion, adresse = mySocket.accept()
     logging.debug('La connection est etablie : ' + str(adresse[0]) + ' ' + str(adresse[1]))

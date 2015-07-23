@@ -5,28 +5,6 @@ import logging
 import tkinter as tk
 import tkinter.font as tkfont
 
-# def buttonleftclick():
-#     logging.debug("Button Left Click")
-#     Client.sendMessage("Left")
-
-# def buttonrightclick():
-#     logging.debug("Button Right Click")
-
-# def buttonforwardclick():
-#     logging.debug("Button Forward Click")
-
-# def buttonbackwardclick():
-#     logging.debug("Button Backward Click")
-
-# def buttonstopclick():
-#     logging.debug("Button Stop Click")
-
-# def buttonleftrelease(event):
-#     logging.debug("Button Left Released")
-
-# def buttonleftpressed(event):
-#     logging.debug("Button Left Pressed")
-
 def keyboardpressed(event):
     logging.debug("Keyboard Pressed" + repr(event.char) + "(" + str(event.keycode) + ")")
     if event.keycode==81:
@@ -70,6 +48,3 @@ buttonstop.grid(sticky=tk.N+tk.E+tk.S+tk.W)
 
 buttonconnect = Button(frameBottom, text="Connect", font=myFont)
 buttonconnect.grid(row=0, column=0)
-
-buttontest = Button(frameBottom, text="TEST", font=myFont)
-buttontest.grid(row=0, column=1)
