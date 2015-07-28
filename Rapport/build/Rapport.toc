@@ -2,6 +2,16 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}
 \contentsline {chapter}{\numberline {2}Mat\IeC {\'e}riel}{3}
 \contentsline {chapter}{\numberline {3}Software}{4}
-\contentsline {chapter}{\numberline {4}Qui a fait quoi}{5}
-\contentsline {chapter}{\numberline {5}Conclusion}{6}
-\contentsline {chapter}{\numberline {A}1234}{7}
+\contentsline {section}{\numberline {3.1}Signaux PWM}{4}
+\contentsline {chapter}{\numberline {4}Notre code}{5}
+\contentsline {paragraph}{Client.py}{5}
+\contentsline {paragraph}{GUI.py}{5}
+\contentsline {paragraph}{Server.py}{6}
+\contentsline {paragraph}{PiRobot.py}{6}
+\contentsline {paragraph}{Python 3.4}{6}
+\contentsline {paragraph}{Tkinter}{6}
+\contentsline {paragraph}{Socket}{6}
+\contentsline {paragraph}{Logging}{6}
+\contentsline {chapter}{\numberline {5}Qui a fait quoi}{7}
+\contentsline {chapter}{\numberline {6}Conclusion}{8}
+\contentsline {chapter}{\numberline {A}1234}{9}
