@@ -34,12 +34,24 @@ def buttonstopclick(event):
     logging.debug('Button STOP click')
     sendMessage('STOP')
 
+def updatepan(event):
+    logging.debug('PAN slider changed :' + str(GUI.sliderpan.get()))
+    sendMessage('PAN'+str(GUI.sliderpan.get()))
+
+def updatetilt(event):
+    logging.debug('TILT slider changed :' + str(GUI.slidertilt.get()))
+    sendMessage('TILT'+str(GUI.slidertilt.get()))
+
+def resetcamera(event):
+    GUI.sliderpan.set(0)
+    GUI.slidertilt.set(0)
+    logging.debug('PAN and TILT reset')
+    sendMessage('CAMERA RESET')
 
 def buttontestclick(event):
     logging.debug('Button TEST click')
     GUI.buttonconnect["bg"] = "green"
     GUI.buttonconnect["text"] = "Connected"
-
 
 def buttonconnectclick(event):
     logging.debug('Button CONNECT click')
@@ -50,7 +62,6 @@ def buttonconnectclick(event):
     else:
         GUI.buttonconnect["bg"] = "red"
         GUI.buttonconnect["text"] = "Disconnected"
-
 
 def connectSocket():
     global isSocketConnected
@@ -86,12 +97,16 @@ def enableButtons():
     GUI.buttonforward.bind("<Button-1>", buttonforwardclick)
     GUI.buttonbackward.bind("<Button-1>", buttonbackwardclick)
     GUI.buttonstop.bind("<Button-1>", buttonstopclick)
+    GUI.sliderpan.bind("<ButtonRelease-1>", updatepan)
+    GUI.slidertilt.bind("<ButtonRelease-1>", updatetilt)
+    GUI.buttonresetcamera.bind("<Button-1>", resetcamera)
 
     GUI.buttonleft.config(state="normal")
     GUI.buttonright.config(state="normal")
     GUI.buttonforward.config(state="normal")
     GUI.buttonbackward.config(state="normal")
     GUI.buttonstop.config(state="normal")
+    GUI.buttonresetcamera.config(state="normal")
 
 def disableButtons():
     GUI.buttonleft.unbind("<Button-1>")
@@ -99,12 +114,16 @@ def disableButtons():
     GUI.buttonforward.unbind("<Button-1>")
     GUI.buttonbackward.unbind("<Button-1>")
     GUI.buttonstop.unbind("<Button-1>")
+    GUI.sliderpan.unbind("<ButtonRelease-1>")
+    GUI.slidertilt.unbind("<ButtonRelease-1>")
+    GUI.buttonresetcamera.unbind("<Button-1>")
 
     GUI.buttonleft.config(state="disabled")
     GUI.buttonright.config(state="disabled")
     GUI.buttonforward.config(state="disabled")
     GUI.buttonbackward.config(state="disabled")
     GUI.buttonstop.config(state="disabled")
+    GUI.buttonresetcamera.config(state="disabled")
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                     # datefmt='%y-%m-%d %H:%M:%S:%',

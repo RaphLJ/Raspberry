@@ -46,32 +46,65 @@ __author__ = 'Raphael'
 #
 # mainloop()
 
-import tkinter as tk
+# import tkinter as tk
+#
+# root = tk.Tk()
+# def myfunction(*event):
+#     x=var.get()
+#     y=entry1.get()
+#     z=entry2.get()
+#     print(len(x),":",len(y),":",len(z))
+#     if len(y)>0 and len(x)>0 and len(z)>0:
+#         button.config(state='normal')
+#     else:
+#         button.config(state='disabled')
+# entry1=tk.Entry(root,width=15)
+# entry1.grid(row=1,column=1)
+# entry2=tk.Entry(root,width=15)
+# entry2.grid(row=1,column=2)
+#
+# choices=('a','b','c')
+# var=tk.StringVar(root)
+# option=tk.OptionMenu(root,var,*choices)
+# option.grid(row=1,column=3)
+#
+# button=tk.Button(root,text="submit")
+# button.grid(row=1,column=4)
+# button.config(state='disabled')
+#
+# root.bind_class("Entry","<FocusOut>",myfunction)
+# var.trace('w', myfunction)
+# root.mainloop()
 
-root = tk.Tk()
-def myfunction(*event):
-    x=var.get()
-    y=entry1.get()
-    z=entry2.get()
-    print(len(x),":",len(y),":",len(z))
-    if len(y)>0 and len(x)>0 and len(z)>0:
-        button.config(state='normal')
-    else:
-        button.config(state='disabled')
-entry1=tk.Entry(root,width=15)
-entry1.grid(row=1,column=1)
-entry2=tk.Entry(root,width=15)
-entry2.grid(row=1,column=2)
+from tkinter import *
 
-choices=('a','b','c')
-var=tk.StringVar(root)
-option=tk.OptionMenu(root,var,*choices)
-option.grid(row=1,column=3)
+def test():
+    print(tiltscale.get(), panscale.get(), tiltscale.get()+panscale.get())
 
-button=tk.Button(root,text="submit")
-button.grid(row=1,column=4)
-button.config(state='disabled')
+def reset():
+    panscale.set(0)
+    tiltscale.set(0)
 
-root.bind_class("Entry","<FocusOut>",myfunction)
-var.trace('w', myfunction)
-root.mainloop()
+def updatetilt(event):
+    print("Tilt :", tiltscale.get())
+
+def updatepan(event):
+    print("Pan :", panscale.get())
+
+master = Tk()
+
+tiltscale = Scale(master, from_=90, to=-15, label="Tilt", sliderlength=20, length=150, command=updatetilt)
+tiltscale.grid(row=0, column=0)
+
+panscale = Scale(master, from_=-90, to=90, orient=HORIZONTAL, label="Pan", sliderlength=20, length=150)
+panscale.grid(row=1, column=0)
+
+panscale.bind("<ButtonRelease-1>", updatepan)
+
+buttontest = Button(master, text="TEST", command=test)
+buttontest.grid(row=2, column=0)
+
+buttonreset = Button(master, text="RESET", command=reset)
+buttonreset.grid(row=3, column=0)
+
+master.mainloop()

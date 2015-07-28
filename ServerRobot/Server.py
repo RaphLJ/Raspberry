@@ -2,6 +2,7 @@ __author__ = 'Raphael'
 
 import logging
 import socket
+import PiRobot
 from sys import *
 
 logging.basicConfig(level=logging.DEBUG,
@@ -13,6 +14,8 @@ logging.info('Demarrage application')
 
 HOST = '192.168.1.100'
 PORT = 10000
+
+robot = PiRobot.PiRobot()
 
 mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -33,4 +36,17 @@ while 1:
         message=message_encode.decode("utf_8")
         if len(message) != 0:
             logging.debug('Message recu : ' + message)
-
+            if message=="LEFT":
+                robot.goLeft()
+            if message=="FORWARD":
+                robot.goForward()
+            if message=="RIGHT":
+                robot.goRight()
+            if message=="BACKWARD":
+                robot.goBackward()
+            if message=="STOP":
+                robot.stop()
+            if message[:3]=="PAN":
+                robot.cameraPan()
+            if message[:4]=="TILT":
+                robot.cameraTilt()
