@@ -1,0 +1,19 @@
+Caractéristiques techniques carte arduino
+
+http://www.dawnrobotics.co.uk/dagu-arduino-mini-driver-board/
+
+Get starded with dagu arduino
+
+http://blog.dawnrobotics.co.uk/2013/11/getting-started-with-the-dagu-arduino-mini-driver-board/
+
+Tutoriel control the robot
+
+http://blog.dawnrobotics.co.uk/2014/06/programming-raspberry-pi-robot-using-python-opencv/
+
+Kit robot
+
+http://www.dawnrobotics.co.uk/raspberry-pi-camera-robot-chassis-bundle/
+
+Serial entre Raspberry et Arduino
+
+http://blog.oscarliang.net/connect-raspberry-pi-and-arduino-usb-cable/
