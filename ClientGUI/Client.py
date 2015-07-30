@@ -131,7 +131,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)-12s %(level
 
 logging.info('Demarrage application')
 
-HOST = '192.168.1.100'  # IP Serveur
+HOST = '192.168.1.50'  # IP Serveur
 PORT = 10000
 
 disableButtons()

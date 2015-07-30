@@ -17,3 +17,7 @@ http://www.dawnrobotics.co.uk/raspberry-pi-camera-robot-chassis-bundle/
 Serial entre Raspberry et Arduino
 
 http://blog.oscarliang.net/connect-raspberry-pi-and-arduino-usb-cable/
+
+Serial Timeout ?
+
+http://stackoverflow.com/questions/20107700/serial-receiving-from-arduino-to-raspberry-pi-with-pyserial-stops-after-a-while

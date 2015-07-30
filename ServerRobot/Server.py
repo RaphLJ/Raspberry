@@ -12,18 +12,21 @@ logging.basicConfig(level=logging.DEBUG,
 
 logging.info('Demarrage application')
 
-HOST = '192.168.1.100'
+HOST = '192.168.1.50'
 PORT = 10000
 
-robot = PiRobot.PiRobot()
-
 mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# robot.goForward()
+# robot.goLeft()
 
 try:
     mySocket.bind((HOST,PORT))
 except socket.error:
     logging.error('La connection a echoue : ' + str(socket.error.strerror))
     exit()
+
+robot = PiRobot.PiRobot()
 
 while 1:
     mySocket.listen(2)
