@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ClientGUI/.idea/ClientGUI.iml" filepath="$PROJECT_DIR$/../ClientGUI/.idea/ClientGUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ServerRobot.iml" filepath="$PROJECT_DIR$/.idea/ServerRobot.iml" />
     </modules>
   </component>

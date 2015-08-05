@@ -91,6 +91,15 @@ def updatetilt(event):
 def updatepan(event):
     print("Pan :", panscale.get())
 
+def fctEventButton1(event):
+    print("Button1 event")
+
+def fctEventButtonPressed1(event):
+    print("ButtonPressed1 event")
+
+def fctEventButtonReleased1(event):
+    print("ButtonReleased1 event")
+
 master = Tk()
 
 tiltscale = Scale(master, from_=90, to=-15, label="Tilt", sliderlength=20, length=150, command=updatetilt)
@@ -107,4 +116,10 @@ buttontest.grid(row=2, column=0)
 buttonreset = Button(master, text="RESET", command=reset)
 buttonreset.grid(row=3, column=0)
 
+buttonevent = Button(master, text="EVENT")
+buttonevent.grid(row=4, column=0)
+
+# buttonevent.bind("<Button-1>", fctEventButton1)
+buttonevent.bind("<ButtonPress-1>", fctEventButtonPressed1)
+buttonevent.bind("<ButtonRelease-1>", fctEventButtonReleased1)
 master.mainloop()

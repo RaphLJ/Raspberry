@@ -30,8 +30,8 @@ def buttonbackwardclick(event):
     sendMessage('BACKWARD')
 
 
-def buttonstopclick(event):
-    logging.debug('Button STOP click')
+def stopMove(event):
+    logging.debug('STOP !')
     sendMessage('STOP')
 
 def updatepan(event):
@@ -96,10 +96,14 @@ def enableButtons():
     GUI.buttonright.bind("<Button-1>", buttonrightclick)
     GUI.buttonforward.bind("<Button-1>", buttonforwardclick)
     GUI.buttonbackward.bind("<Button-1>", buttonbackwardclick)
-    GUI.buttonstop.bind("<Button-1>", buttonstopclick)
+    GUI.buttonstop.bind("<Button-1>", stopMove)
     GUI.sliderpan.bind("<ButtonRelease-1>", updatepan)
     GUI.slidertilt.bind("<ButtonRelease-1>", updatetilt)
     GUI.buttonresetcamera.bind("<Button-1>", resetcamera)
+    GUI.buttonleft.bind("<ButtonRelease-1>", stopMove)
+    GUI.buttonright.bind("<ButtonRelease-1>", stopMove)
+    GUI.buttonforward.bind("<ButtonRelease-1>", stopMove)
+    GUI.buttonbackward.bind("<ButtonRelease-1>", stopMove)
 
     GUI.buttonleft.config(state="normal")
     GUI.buttonright.config(state="normal")
@@ -117,6 +121,11 @@ def disableButtons():
     GUI.sliderpan.unbind("<ButtonRelease-1>")
     GUI.slidertilt.unbind("<ButtonRelease-1>")
     GUI.buttonresetcamera.unbind("<Button-1>")
+
+    GUI.buttonleft.unbind("<ButtonRelease-1>")
+    GUI.buttonright.unbind("<ButtonRelease-1>")
+    GUI.buttonforward.unbind("<ButtonRelease-1>")
+    GUI.buttonbackward.unbind("<ButtonRelease-1>")
 
     GUI.buttonleft.config(state="disabled")
     GUI.buttonright.config(state="disabled")

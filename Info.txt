@@ -2,6 +2,10 @@ Caractéristiques techniques carte arduino
 
 http://www.dawnrobotics.co.uk/dagu-arduino-mini-driver-board/
 
+Caractéristiques techniques carte arduino 2
+
+http://www.dawnrobotics.co.uk/dagu-arduino-mini-driver-mkii/
+
 Get starded with dagu arduino
 
 http://blog.dawnrobotics.co.uk/2013/11/getting-started-with-the-dagu-arduino-mini-driver-board/
@@ -21,3 +25,15 @@ http://blog.oscarliang.net/connect-raspberry-pi-and-arduino-usb-cable/
 Serial Timeout ?
 
 http://stackoverflow.com/questions/20107700/serial-receiving-from-arduino-to-raspberry-pi-with-pyserial-stops-after-a-while
+
+Install motion-mmal
+
+https://www.raspberrypi.org/forums/viewtopic.php?t=50243&p=389997
+
+Configure wifi
+
+https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
+
+Backup Raspberry
+
+http://lifehacker.com/how-to-clone-your-raspberry-pi-sd-card-for-super-easy-r-1261113524

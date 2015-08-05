@@ -1,0 +1,1 @@
+Changer couleur du texte d'un bouton (stop en blanc)

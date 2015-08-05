@@ -5,23 +5,19 @@ import logging
 
 class PiRobot:
 
-
-    
-
-    def __init__(self):
-        self.ser=serial.Serial('/dev/ttyUSB0', 9600)
+    def __init__(self):# Constructeur de classe
+        self.ser=serial.Serial('/dev/ttyUSB0', 9600) #Port utilisé, et vitesse en baud
         self.leftMotorDir = "F"
         self.leftMotorSpeed = 0
         self.rightMotorDir = "F"
         self.rightMotorSpeed = 0
 
-    def __del__(self):
+    def __del__(self): # Destructeur de classe
         self.ser.close()
 
     def sendCommand(self):
         command = '{0:1s}{1:03d}{2:1s}{3:03d}\n'.format(self.leftMotorDir, self.leftMotorSpeed, self.rightMotorDir, self.rightMotorSpeed)
 
-        # command = "coucou gamin"
         logging.debug("Commande a envoyer :" + command)
         self.ser.write(command.encode())
 
