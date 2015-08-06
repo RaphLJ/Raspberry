@@ -1,9 +1,10 @@
 __author__ = 'Raphael'
 
 import logging
+import socket
 
 import GUI
-import socket
+import ClientGlobals
 from sys import *
 
 def noAction(event):
@@ -13,26 +14,34 @@ def noAction(event):
 def buttonleftclick(event):
     logging.debug('Button LEFT click')
     sendMessage('LEFT')
+    globalVar.startTiming('LEFT')
 
 
 def buttonrightclick(event):
     logging.debug('Button RIGHT click')
     sendMessage('RIGHT')
+    globalVar.startTiming('RIGHT')
 
 
 def buttonforwardclick(event):
     logging.debug('Button FORWARD click')
     sendMessage('FORWARD')
+    globalVar.startTiming('FORWARD')
 
 
 def buttonbackwardclick(event):
     logging.debug('Button BACKWARD click')
     sendMessage('BACKWARD')
+    globalVar.startTiming('BACKWARD')
 
 
 def stopMove(event):
     logging.debug('STOP !')
     sendMessage('STOP')
+
+    #Draw line
+    GUI.makeMove(globalVar.currentMoveType, globalVar.getDeltaT())
+
 
 def updatepan(event):
     logging.debug('PAN slider changed :' + str(GUI.sliderpan.get()))
@@ -144,6 +153,9 @@ HOST = '192.168.1.50'  # IP Serveur
 PORT = 10000
 
 disableButtons()
+# enableButtons()
+globalVar = ClientGlobals.globalVar()
+GUI.initGraph()
 
 mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 isSocketConnected = False
