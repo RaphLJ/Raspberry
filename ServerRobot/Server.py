@@ -22,6 +22,7 @@ mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
     mySocket.bind((HOST,PORT))
+    logging.debug('Socket bound')
 except socket.error:
     logging.error('La connection a echoue : ' + str(socket.error.strerror))
     exit()

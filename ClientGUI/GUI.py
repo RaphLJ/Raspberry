@@ -15,6 +15,39 @@ def keyboardpressed(event):
         logging.debug("I want to QUIT !")
         exit()
 
+def makeMove(currentMoveType, deltaT):
+    global currentPosition
+    global currentXCoord
+    global currentYCoord
+    global currentDirection
+    if (currentMoveType =="FORWARD" or currentMoveType =="BACKWARD"):
+        if (currentMoveType == "FORWARD"):
+            speedDirection = 1
+        else:
+            speedDirection = -1
+
+        canvasRoute.itemconfigure(currentPosition, fill="blue")
+        # currentPosition["fill"] = "blue"
+        newXCoord = currentXCoord + linearSpeed * math.cos(currentDirection * math.pi / 180) * deltaT * speedDirection
+        newYCoord = currentYCoord + linearSpeed * math.sin(currentDirection * math.pi / 180) * deltaT * speedDirection
+        currentPosition= canvasRoute.create_oval(newXCoord-sizePoint,newYCoord-sizePoint,newXCoord+sizePoint,newYCoord+sizePoint, width=1, fill="red")
+        currentLine = canvasRoute.create_line(currentXCoord, currentYCoord, newXCoord, newYCoord, fill="red")
+        currentXCoord=newXCoord
+        currentYCoord=newYCoord
+        canvasRoute.update_idletasks() # Pour rafraichir l'ecran
+        # time.sleep(0.5)
+        # canvasRoute.itemconfigure(currentLine, fill="grey")
+    if (currentMoveType=="LEFT"):
+        # if (anAction.duration < 0.1):
+        #     currentDirection -= 30
+        # else:
+            currentDirection -= angularSpeed * deltaT
+    if (currentMoveType=="RIGHT"):
+        # if (anAction.duration < 0.1):
+        #     currentDirection += 30
+        # else:
+            currentDirection += angularSpeed * deltaT
+
 def initGraph():
     global currentXCoord
     global currentYCoord
@@ -29,6 +62,10 @@ def initGraph():
     # theglobals.speed = 1
 
     currentPosition = canvasRoute.create_oval(currentXCoord-sizePoint,currentYCoord-sizePoint,currentXCoord+sizePoint,currentYCoord+sizePoint, width=1, fill="red")
+
+def resetGraph(event):
+    canvasRoute.delete("all")
+    initGraph()
 
 master = Tk()
 myFont = tkfont.Font(size=18)
@@ -104,35 +141,5 @@ buttonresetcamera.grid(row=2, column=0)
 buttonconnect = Button(frameBottom, text="Connect", font=myFont)
 buttonconnect.grid(row=0, column=0)
 
-def makeMove(currentMoveType, deltaT):
-    global currentPosition
-    global currentXCoord
-    global currentYCoord
-    global currentDirection
-    if (currentMoveType =="FORWARD" or currentMoveType =="BACKWARD"):
-        if (currentMoveType == "FORWARD"):
-            speedDirection = 1
-        else:
-            speedDirection = -1
+canvasRoute.bind("<Double-Button-1>", resetGraph)
 
-        canvasRoute.itemconfigure(currentPosition, fill="blue")
-        # currentPosition["fill"] = "blue"
-        newXCoord = currentXCoord + linearSpeed * math.cos(currentDirection * math.pi / 180) * deltaT * speedDirection
-        newYCoord = currentYCoord + linearSpeed * math.sin(currentDirection * math.pi / 180) * deltaT * speedDirection
-        currentPosition= canvasRoute.create_oval(newXCoord-sizePoint,newYCoord-sizePoint,newXCoord+sizePoint,newYCoord+sizePoint, width=1, fill="red")
-        currentLine = canvasRoute.create_line(currentXCoord, currentYCoord, newXCoord, newYCoord, fill="red")
-        currentXCoord=newXCoord
-        currentYCoord=newYCoord
-        canvasRoute.update_idletasks() # Pour rafraichir l'ecran
-        # time.sleep(0.5)
-        # canvasRoute.itemconfigure(currentLine, fill="grey")
-    if (currentMoveType=="LEFT"):
-        # if (anAction.duration < 0.1):
-        #     currentDirection -= 30
-        # else:
-            currentDirection -= angularSpeed * deltaT
-    if (currentMoveType=="RIGHT"):
-        # if (anAction.duration < 0.1):
-        #     currentDirection += 30
-        # else:
-            currentDirection += angularSpeed * deltaT
