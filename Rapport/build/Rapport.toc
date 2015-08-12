@@ -1,9 +1,10 @@
 \select@language {french}
 \contentsline {chapter}{\numberline {1}Introduction}{2}
 \contentsline {chapter}{\numberline {2}Mat\IeC {\'e}riel}{3}
-\contentsline {chapter}{\numberline {3}Software}{4}
-\contentsline {section}{\numberline {3.1}Signaux PWM}{4}
-\contentsline {chapter}{\numberline {4}Organisation}{5}
+\contentsline {paragraph}{Kit}{3}
+\contentsline {paragraph}{Raspberry Pi}{3}
+\contentsline {paragraph}{Arduino}{4}
+\contentsline {chapter}{\numberline {3}Organisation}{5}
 \contentsline {paragraph}{Client.py}{5}
 \contentsline {paragraph}{GUI.py}{5}
 \contentsline {paragraph}{Server.py}{6}
@@ -13,8 +14,13 @@
 \contentsline {paragraph}{Socket}{6}
 \contentsline {paragraph}{Logging}{6}
 \contentsline {paragraph}{Github}{6}
-\contentsline {chapter}{\numberline {5}Qui a fait quoi}{8}
-\contentsline {chapter}{\numberline {6}Conclusion}{9}
-\contentsline {chapter}{\numberline {A}Proc\IeC {\'e}dure d'installation}{10}
-\contentsline {section}{\numberline {A.1}Installation de Raspbian sur le Raspberry Pi}{10}
-\contentsline {section}{\numberline {A.2}Configurer le WiFi sur le Raspberry Pi}{11}
+\contentsline {chapter}{\numberline {4}Impl\IeC {\'e}mentation}{8}
+\contentsline {section}{\numberline {4.1}Le premier robot}{8}
+\contentsline {section}{\numberline {4.2}Construction du second robot}{9}
+\contentsline {section}{\numberline {4.3}PWM}{9}
+\contentsline {section}{\numberline {4.4}Socket}{9}
+\contentsline {chapter}{\numberline {5}Qui a fait quoi}{11}
+\contentsline {chapter}{\numberline {6}Conclusion}{12}
+\contentsline {chapter}{\numberline {A}Proc\IeC {\'e}dure d'installation}{13}
+\contentsline {section}{\numberline {A.1}Installation de Raspbian sur le Raspberry Pi}{13}
+\contentsline {section}{\numberline {A.2}Configurer le WiFi sur le Raspberry Pi}{14}

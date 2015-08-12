@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.12)  3 AUG 2015 16:47
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.12)  12 AUG 2015 11:39
 entering extended mode
 **Rapport.tex
 
@@ -761,6 +761,10 @@ Package babel Info: Making ? an active character on input line 123.
 *
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\frenchb.cfg")))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box28
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -811,8 +815,8 @@ Package: textpos 2012/11/13 1.7i, absolute positioning of text on the page
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
-\TP@textbox=\box28
-\TP@holdbox=\box29
+\TP@textbox=\box29
+\TP@holdbox=\box30
 \TPHorizModule=\dimen133
 \TPVertModule=\dimen134
 \TP@margin=\dimen135
@@ -846,50 +850,57 @@ File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )))
 (C:\Users\Raphael\Documents\Ecole\UMONS_FPMs\3ème\ProjetIG\Raspberry\Rapport\b
-uild\Rapport.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 29.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 29.
+uild\Rapport.aux
+
+LaTeX Warning: Label `GitHub' multiply defined.
+
+
+LaTeX Warning: Label `GitHub' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 30.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 30.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 29.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 29.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 30.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 30.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd"
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 29.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 29.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 30.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 30.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 29.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
@@ -898,7 +909,7 @@ File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
 \scratchdimen=\dimen143
-\scratchbox=\box30
+\scratchbox=\box31
 \nofMPsegments=\count124
 \nofMParguments=\count125
 \everyMPshowfont=\toks28
@@ -911,15 +922,15 @@ File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \degres on input line 29.
+LaTeX Info: Redefining \degres on input line 30.
 
 
 Package frenchb.ldf Warning: The definition of \@makecaption has been changed,
 (frenchb.ldf)                frenchb will NOT customise it;
-(frenchb.ldf)                reported on input line 29.
+(frenchb.ldf)                reported on input line 30.
 
-LaTeX Info: Redefining \dots on input line 29.
-LaTeX Info: Redefining \up on input line 29.
+LaTeX Info: Redefining \dots on input line 30.
+LaTeX Info: Redefining \up on input line 30.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -956,7 +967,7 @@ LaTeX Info: Redefining \up on input line 29.
 
 ABD: EveryShipout initializing macros
 TextBlockOrigin set to 0cm x 0cm
-LaTeX Font Info:    Try loading font information for T1+phv on input line 32.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 33.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
@@ -964,69 +975,69 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 File: umonsCharte/UMONS-Logo.jpg Graphic file (type jpg)
 
 <use umonsCharte/UMONS-Logo.jpg>
-Package pdftex.def Info: umonsCharte/UMONS-Logo.jpg used on input line 32.
+Package pdftex.def Info: umonsCharte/UMONS-Logo.jpg used on input line 33.
 (pdftex.def)             Requested size: 176.40707pt x 63.34317pt.
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 32.
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 32
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 33.
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 33
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd"
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 18.39996pt on input line 32.
+(Font)              scaled to size 18.39996pt on input line 33.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.98386pt on input line 32.
+(Font)              scaled to size 13.98386pt on input line 33.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.04008pt on input line 32.
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
+(Font)              scaled to size 11.04008pt on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 18.39996pt on input line 32.
+(Font)              scaled to size 18.39996pt on input line 33.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.98386pt on input line 32.
+(Font)              scaled to size 13.98386pt on input line 33.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.04008pt on input line 32.
+(Font)              scaled to size 11.04008pt on input line 33.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 32.
+(Font)              scaled to size 11.03998pt on input line 33.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 32.
+(Font)              scaled to size 8.27998pt on input line 33.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 32.
+(Font)              scaled to size 6.43999pt on input line 33.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 32.
+(Font)              scaled to size 11.03998pt on input line 33.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 32.
+(Font)              scaled to size 8.27998pt on input line 33.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 32.
+(Font)              scaled to size 6.43999pt on input line 33.
 
 <umonsCharte/FPMS-Logo.jpg, id=2, 474.27188pt x 166.40167pt>
 File: umonsCharte/FPMS-Logo.jpg Graphic file (type jpg)
 
 <use umonsCharte/FPMS-Logo.jpg>
-Package pdftex.def Info: umonsCharte/FPMS-Logo.jpg used on input line 32.
+Package pdftex.def Info: umonsCharte/FPMS-Logo.jpg used on input line 33.
 (pdftex.def)             Requested size: 187.78763pt x 65.44228pt.
 
 <umonsCharte/AUWB-Logo.jpg, id=3, 141.82988pt x 58.71938pt>
 File: umonsCharte/AUWB-Logo.jpg Graphic file (type jpg)
 
 <use umonsCharte/AUWB-Logo.jpg>
-Package pdftex.def Info: umonsCharte/AUWB-Logo.jpg used on input line 32.
+Package pdftex.def Info: umonsCharte/AUWB-Logo.jpg used on input line 33.
 (pdftex.def)             Requested size: 82.51299pt x 34.16118pt.
 
 <umonsCharte/FPMS-Photo.jpg, id=4, 213.5478pt x 361.35pt>
 File: umonsCharte/FPMS-Photo.jpg Graphic file (type jpg)
 
 <use umonsCharte/FPMS-Photo.jpg>
-Package pdftex.def Info: umonsCharte/FPMS-Photo.jpg used on input line 32.
+Package pdftex.def Info: umonsCharte/FPMS-Photo.jpg used on input line 33.
 (pdftex.def)             Requested size: 213.39412pt x 361.35463pt.
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
@@ -1037,7 +1048,7 @@ ts/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/umonsCharte/AUWB-Logo.jpg>
  <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
 umonsCharte/FPMS-Photo.jpg>]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 33.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 34.
 
 (C:\Users\Raphael\Documents\Ecole\UMONS_FPMs\3ème\ProjetIG\Raspberry\Rapport\b
 uild\Rapport.toc
@@ -1050,39 +1061,75 @@ LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
 
 ]
 Chapitre 1.
-<GraphMateriel.png, id=15, 558.085pt x 246.9225pt>
-File: GraphMateriel.png Graphic file (type png)
- <use GraphMateriel.png>
-Package pdftex.def Info: GraphMateriel.png used on input line 43.
-(pdftex.def)             Requested size: 334.85359pt x 148.15462pt.
+<images/GraphMateriel.png, id=15, 558.085pt x 246.9225pt>
+File: images/GraphMateriel.png Graphic file (type png)
 
-[2
+<use images/GraphMateriel.png>
+Package pdftex.def Info: images/GraphMateriel.png used on input line 44.
+(pdftex.def)             Requested size: 334.85359pt x 148.15462pt.
+ [2
 
  <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
-GraphMateriel.png>]
+images/GraphMateriel.png>]
 Chapitre 2.
+<images/kit.jpg, id=21, 1284.8pt x 1167.36125pt>
+File: images/kit.jpg Graphic file (type jpg)
+ <use images/kit.jpg>
+Package pdftex.def Info: images/kit.jpg used on input line 77.
+(pdftex.def)             Requested size: 256.95544pt x 233.46811pt.
+
+<images/modelB+.jpg, id=22, 1284.8pt x 856.19875pt>
+File: images/modelB+.jpg Graphic file (type jpg)
+ <use images/modelB+.jpg>
+Package pdftex.def Info: images/modelB+.jpg used on input line 100.
+(pdftex.def)             Requested size: 256.95544pt x 171.23671pt.
+
+Overfull \hbox (52.09698pt too wide) in paragraph at lines 100--101
+ [] 
+ []
+
+<images/model2.jpg, id=23, 445.665pt x 317.185pt>
+File: images/model2.jpg Graphic file (type jpg)
+ <use images/model2.jpg>
+Package pdftex.def Info: images/model2.jpg used on input line 108.
+(pdftex.def)             Requested size: 178.26283pt x 126.87173pt.
+
 [3
 
-]
-Chapitre 3.
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 70.
-[4
+ <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
+images/kit.jpg>] <images/mini_driver.jpg, id=27, 261.4794pt x 305.0593pt>
+File: images/mini_driver.jpg Graphic file (type jpg)
 
-]
-Chapitre 4.
-<GraphLogiciel.png, id=28, 684.5575pt x 179.67125pt>
-File: GraphLogiciel.png Graphic file (type png)
- <use GraphLogiciel.png>
-Package pdftex.def Info: GraphLogiciel.png used on input line 80.
+<use images/mini_driver.jpg>
+Package pdftex.def Info: images/mini_driver.jpg used on input line 128.
+(pdftex.def)             Requested size: 130.73936pt x 152.52927pt.
+
+<images/Mini_Driver_MkII.jpg, id=28, 144.54pt x 154.176pt>
+File: images/Mini_Driver_MkII.jpg Graphic file (type jpg)
+
+<use images/Mini_Driver_MkII.jpg>
+Package pdftex.def Info: images/Mini_Driver_MkII.jpg used on input line 136.
+(pdftex.def)             Requested size: 144.53963pt x 154.1756pt.
+ [4 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rappo
+rt/images/modelB+.jpg> <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/Proje
+tIG/Raspberry/Rapport/images/model2.jpg> <C:/Users/Raphael/Documents/Ecole/UMON
+S_FPMs/3ème/ProjetIG/Raspberry/Rapport/images/mini_driver.jpg> <C:/Users/Rapha
+el/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/images/Mini_Driv
+er_MkII.jpg>]
+Chapitre 3.
+<images/GraphLogiciel.png, id=33, 684.5575pt x 179.67125pt>
+File: images/GraphLogiciel.png Graphic file (type png)
+
+<use images/GraphLogiciel.png>
+Package pdftex.def Info: images/GraphLogiciel.png used on input line 163.
 (pdftex.def)             Requested size: 410.73766pt x 107.80356pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 100.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 183.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (7.82452pt too wide) in paragraph at lines 114--115
+Overfull \hbox (7.82452pt too wide) in paragraph at lines 197--198
 \T1/futs/m/n/12 bot, ainsi quand \T1/futs/m/it/12 Ser-ver.py \T1/futs/m/n/12 re
 -�oit un mes-sage, il n'a qu'� ap-pe-ler la bonne fonc-tion (par exemple
  []
@@ -1090,53 +1137,78 @@ Overfull \hbox (7.82452pt too wide) in paragraph at lines 114--115
 [5
 
  <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
-GraphLogiciel.png>] <GitHub.png, id=34, 578.16pt x 981.6675pt>
-File: GitHub.png Graphic file (type png)
+images/GraphLogiciel.png>] <images/GitHub.png, id=40, 578.16pt x 981.6675pt>
+File: images/GitHub.png Graphic file (type png)
 
-<use GitHub.png>
-Package pdftex.def Info: GitHub.png used on input line 144.
+<use images/GitHub.png>
+Package pdftex.def Info: images/GitHub.png used on input line 227.
 (pdftex.def)             Requested size: 404.70924pt x 687.16257pt.
 
 
-LaTeX Warning: Float too large for page by 8.87947pt on input line 147.
+LaTeX Warning: Float too large for page by 8.87947pt on input line 230.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6] [7 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Ra
-pport/GitHub.png>]
+pport/images/GitHub.png>]
+Chapitre 4.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 236.
+<images/y.jpg, id=48, 264.99pt x 264.99pt>
+File: images/y.jpg Graphic file (type jpg)
+ <use images/y.jpg>
+Package pdftex.def Info: images/y.jpg used on input line 248.
+(pdftex.def)             Requested size: 132.49467pt x 132.49467pt.
+ [8
+
+ <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
+images/y.jpg>]
+<images/PWM/totzal.png, id=52, 890.5772pt x 408.77719pt>
+File: images/PWM/totzal.png Graphic file (type png)
+
+<use images/PWM/totzal.png>
+Package pdftex.def Info: images/PWM/totzal.png used on input line 270.
+(pdftex.def)             Requested size: 356.22456pt x 163.50797pt.
+ [9 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rappo
+rt/images/PWM/totzal.png>] [10]
 Chapitre 5.
-[8
+[11
 
 ]
 Chapitre 6.
-[9
+[12
 
 ]
 Annexe A.
-[10
+[13
 
-] [11]
+] [14]
 (C:\Users\Raphael\Documents\Ecole\UMONS_FPMs\3ème\ProjetIG\Raspberry\Rapport\b
-uild\Rapport.aux) ) 
+uild\Rapport.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6860 strings out of 493921
- 96325 string characters out of 3147275
- 161382 words of memory out of 3000000
- 9966 multiletter control sequences out of 15000+200000
- 101332 words of font info for 94 fonts, out of 3000000 for 9000
+ 6958 strings out of 493921
+ 98032 string characters out of 3147275
+ 163706 words of memory out of 3000000
+ 10050 multiletter control sequences out of 15000+200000
+ 101449 words of font info for 95 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,7n,75p,516b,459s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Raphael\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ectt1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fon
-tname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/urw/helvetic/uhvr8a.pfb>
+ 36i,9n,75p,516b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Rapha
+el\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ad
+obe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
+vr8a.pfb>
 Output written on C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Ra
-spberry/Rapport/build/Rapport.pdf (12 pages, 913425 bytes).
+spberry/Rapport/build/Rapport.pdf (15 pages, 2267116 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
+ 160 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

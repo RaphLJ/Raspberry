@@ -9,6 +9,7 @@
 %\usepackage{gensymb}
 \usepackage{fourier}
 \usepackage[francais]{babel}
+\usepackage{eurosym}
 
 \usepackage[top=2.5cm,bottom=2.5cm,right=2.5cm,left=2.5cm]{geometry}
 
@@ -40,44 +41,126 @@ Faire en français et en anglais !
 
 \begin{figure}[hf!]
 \center
-\includegraphics[scale=0.6]{GraphMateriel.png}
+\includegraphics[scale=0.6]{images/GraphMateriel.png}
 \caption{Matériel}
 \end{figure}
 
-\chapter{Matériel}
+\chapter{Matériel} \label{Matériel}
 
-Lister le matériel utilisé, justifier sa présence
+%Lister le matériel utilisé, justifier sa présence
+%
+%- Raspberry (pourquoi pas un Arduino, par exemple ?)
+%- Moteurs (quel modèle ?)
+%- Contrôleur (expliquer son utilité)
+%- Batterie
+%- Clé wifi
+%- Webcam (caractéristiques techniques)
+%- Réseau Wi-Fi opérationnel
+%- ?
 
-- Raspberry (pourquoi pas un Arduino, par exemple ?)
-- Moteurs (quel modèle ?)
-- Contrôleur (expliquer son utilité)
-- Batterie
-- Clé wifi
-- Webcam (caractéristiques techniques)
-- Réseau Wi-Fi opérationnel
-- ?
+Voici la liste complète du matériel que nous avons utilisé :
 
-\chapter{Software}
+\paragraph{Kit} Le kit que nous utilisons se compose des éléments suivants :
 
-%Trouver un autre titre !!!
+\begin{itemize}
+\item Chassis Bundle
+\item Raspberry pi 2
+\item Arduino
+\item Batterie : TeckNet iEP387
+\item Carte micro SD
+\item Raspberry pi camera
+\item Wifi : Edimax EW-7811Un -150Mbps
+\end{itemize}
 
-%Ici expliquer le principe des signaux PWM, des sockets, du multi-thread (même si pas utilisé... Parler des pistes envisagées)
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.2]{images/kit.jpg}
+\caption{Robot complet}
+\end{figure}
 
-%Captures d'écran
+\paragraph{Raspberry Pi} Nous avons donc utilisé deux modèles de raspberry pi lors de notre projet le Raspberry Pi B+ et le Raspberry Pi 2. 
+Bien que visuellement, ces deux modèles se ressemblent très fort, leurs caractéristiques sont différentes :
 
-Lors de la réalisation du projet, nous avons envisagé plusieurs pistes pour contrôler le robot. 
+\begin{tabular}{l|p{4.5 cm}|p{4.5 cm}}
+ & Modèle B+ & Modèle 2 \\ 
+\hline 
+Mémoire RAM & 512 Mo & 1 Go \\ 
+Processeur & ARMv6 & ARMv7 (4 coeurs) \\
+Fréquence du processeur & 700 MHz & 900 MHz \\
+Mémoire de stockage & MicroSD & MicroSD \\
+Ports & 4 USB 2.0, HDMI, RJ45 \newline Jack (3.5mm), 40 broches GPIO & 4 USB 2.0, HDMI, RJ45, Jack (3.5mm), 40 broches GPIO \\
+Consommation & 600 mA, 3.5 W & 600 mA, 3.5 W \\
+Prix & environ 30 \euro & environ 40 \euro \\
+Système d'exploitation & Linux & Linux, ou Windows 10
+\end{tabular}
 
-\section{Signaux PWM}
+\begin{figure}[htbp]
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+\includegraphics[scale=0.2]{images/modelB+.jpg}
+\caption{Raspberry Pi B+}
+%\label{}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+\includegraphics[scale=0.4]{images/model2.jpg}
+\caption{Raspberry Pi 2}
+%\label{}
+\end{center}
+\end{minipage}
+\end{figure}
 
-Pour contrôler les moteurs, nous pouvons utiliser les signaux PWM (\textit{Pulse Width Modulation}) : il s'agit d'ondes carrées périodiques. 
+\paragraph{Arduino} C'est la carte Arduino qui fait le lien entre le Raspberry et les moteurs. Nous avons testé deux modèles différents :
 
-Pour chaque période, on envoie une tension continue de 5 volts (qui correspond à la tension de base du Raspberry Pi, délivrée sur les ports GPIO) pendant une fraction de la période seulement. La tension « perçue » par le moteur est directement proportionnelle à cette fraction. Si cette fraction vaut par exemple 60 \%, le moteur tournera comme si on envoyait 3 V, donc à 60 \% de son régime maximum, si sa tension nominale est de 5 V. 
+\begin{tabular}{l|p{4.5 cm}|p{4.5 cm}}
+ & Dagu mini driver & Dagu mini driver MKII \\ 
+\hline 
+Processeur & ATMega8A & ATMega328P \\
+Fréquence du processeur & 16 MHz & 16 MHz \\
+Prix & environ 10 \euro & environ 12 \euro \\
+\end{tabular}
+
+\begin{figure}[htbp]
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+\includegraphics[scale=0.5]{images/mini_driver.jpg}
+\caption{Dagu mini driver}
+%\label{}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{.45\linewidth}
+\begin{center}
+\includegraphics[scale=1]{images/Mini_Driver_MkII.jpg}
+\caption{Dagu mini driver MKII}
+%\label{}
+\end{center}
+\end{minipage}
+\end{figure}
+
+%\chapter{Software}
+%
+%%Trouver un autre titre !!!
+%
+%%Ici expliquer le principe des signaux PWM, des sockets, du multi-thread (même si pas utilisé... Parler des pistes envisagées)
+%
+%%Captures d'écran
+%
+%Lors de la réalisation du projet, nous avons envisagé plusieurs pistes pour contrôler le robot. 
+%
+%\section{Signaux PWM}
+%
+%Pour contrôler les moteurs, nous pouvons utiliser les signaux PWM (\textit{Pulse Width Modulation}) : il s'agit d'ondes carrées périodiques. 
+%
+%Pour chaque période, on envoie une tension continue de 5 volts (qui correspond à la tension de base du Raspberry Pi, délivrée sur les ports GPIO) pendant une fraction de la période seulement. La tension « perçue » par le moteur est directement proportionnelle à cette fraction. Si cette fraction vaut par exemple 60 \%, le moteur tournera comme si on envoyait 3 V, donc à 60 \% de son régime maximum, si sa tension nominale est de 5 V. 
 
 \chapter{Organisation}
 
 \begin{figure}[hf!]
 \center
-\includegraphics[scale=0.6]{GraphLogiciel.png}
+\includegraphics[scale=0.6]{images/GraphLogiciel.png}
 \caption{Logiciel}
 \end{figure}
 
@@ -141,11 +224,90 @@ C'est une alternative au \verb=print('Button STOP click')=, et qui permet de sau
 
 \begin{figure}[hf!]
 \center
-\includegraphics[scale=0.7]{GitHub.png}
+\includegraphics[scale=0.7]{images/GitHub.png}
 \caption{Interface de GitHub sous Windows}
 \label{GitHub}
 \end{figure}
+
 \end{itemize}
+
+\chapter{Implémentation}
+
+\section{Le premier robot}
+
+Nous avions , dans un premiers temps, travaillé avec le Raspberry pi B+ et un contrôleur DC (DRV8833) pouvant gérer deux moteurs (1.2 A , 2.7-10.8 V ). Cette solution, peut couteuse, nous a permis de travailler avec les pins GPIO du Raspberry.
+
+Nos moteurs fonctionnaient avec une tension de 5 V, et étaient directement alimentés par ces pins. Nous avons beaucoup travaillé sur la partie électronique afin d'assembler au mieux un robot. Nous avions d'abord pensé implémenter directement dans le code l'envoi de signaux PWM dans les ports GPIO, avec une boucle dans le programme qui se répète toutes les 50 millisecondes et qui, selon les commandes envoyées, permet de faire avancer, tourner ou reculer le robot.
+
+Mais dans nos recherches, nous nous sommes aperçus que des librairies existaient déjà, et permettaient d'envoyer des signaux avec une seule commande, qui prenaient comme paramètre la vitesse relative des moteurs (100\% pour faire tourner le moteur à pleine vitesse vers l'avant, par exemple) 
+
+Néanmoins, la qualité du matériel en notre possession n'était pas optimale : nous n'arrivions pas a fixer correctement les roues sur les axes des moteurs, et nous avons grillé le contrôleur DC lors de nos manipulations.
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.5]{images/y.jpg}
+\caption{Contrôleur DRV8833}
+\label{GitHub}
+\end{figure}
+
+Nous avons réalisé à ce moment l'importance d'une bonne organisation de notre travail : nous avons opté pour une réalisation du projet étape par étape : c'est-à-dire que pour chaque chose à faire, on la découpe en petites tâches "plus simples". Cette méthode présente deux avantages : on voit notre progression, car chaque étape est un pas vers la solution définitive, et si on rencontre un problème, on peut revenir à une étape antérieure qu'on sait fonctionnelle.
+
+\section{Construction du second robot}
+
+%Nous avons donc pris l'initiative de changer pour un kit qui nous permettrait de gagner du temps sur la partie électronique en utilisant une carte Arduino pour commander les moteurs, et surtout qui est  ayant des roues et un chassis adapté à nos envies.
+Nous avons donc pris l'initiative de changer pour un kit qui nous permet d'avoir des composants compatibles entre eux, et de meilleure qualité.
+%Les servo-moteurs étant géré par le raspberry afin de pouvoir jouer avec la caméra.
+Les moteurs sont donc directement relié aux pins de la carte Arduino, elle-même reliée au Raspberry avec un câble USB.
+L'ensemble du matériel utilisé est décrit en détail au chapitre \ref{Matériel}.
+
+\section{PWM}
+
+Les signaux PWM (Pulse Width Modulation) sont une technique qui nous permet d'obtenir une réponse analogique à partir d'un système fonctionnant en tout ou rien (système discret). Ce sont donc des ondes carrées dont le rapport de la largeur sur chaque période nous donne, dans ce cas-ci, la valeur de notre vitesse.
+La largeur de pulsation correspond au laps de temps au cours duquel le système a la valeur 1 (5 V). Cette largeur rapportée sur l'entièreté de la période, nous donne le pourcentage d'activité, le Duty Cycle.
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.4]{images/PWM/totzal.png}
+\caption{Principe des signaux PWM}
+\label{GitHub}
+\end{figure}
+
+\section{Socket}
+
+Pour notre robot, la création d'une connection Socket entre un PC et un Raspberry était nécessaire.
+
+La première étape est de créer une connection entre un PC et ce même PC. Nous avons trouvé plusieurs exemples sur internet qui fonctionnent. Mais nous avons voulu aller plus loin pour cette étape : 
+
+\bigbreak
+
+\begin{itemize}
+\item Ne pas envoyer une chaîne de caractère directement du code, mais la demander à l'utilisateur.
+\item Traiter la chaîne reçue sur l'autre programme, simplement l'afficher, afficher le premier caractère, ou si on envoie un nombre (envoyé sous forme de chaîne), récupérer ce nombre et effectuer une opération mathématique simple.
+\item Envoyer une chaîne (n'importe quoi, cela n'a pas d'importance), puis dès que l'autre programme reçoit cette chaîne, renvoyer une autre chaîne.
+\item Sur le PC, gérer avec Python les dates.
+\end{itemize}
+
+\bigbreak
+
+Ainsi avec quelques étapes "faciles", on peut affirmer :
+
+\bigbreak
+
+\begin{itemize}
+\item On sait ouvrir une connection,
+\item On peut envoyer n'importe quelle information "simple" (types de données courants),
+\item On sait la récupérer et la traiter de l'autre coté,
+\item On sait estimer le temps que ça prend pour l'envoi (lors de nos tests, l'aller-retour prenait environ 0.7 secondes).
+\item On sait comment fonctionne le code, car au lieu de recopier bêtement d'internet, on l'a modifié en cherchant à comprendre son fonctionnement.
+\end{itemize}
+
+\bigbreak
+
+Ensuite, nous avons répété les mêmes processus entre un PC (sous Windows) et une machine virtuelle (sous Debian). Ces étapes sont normalement immédiates, puisque tous les codes ont déjà été écrits à l'étape précédente.
+
+\bigbreak
+
+Enfin, nous avons refait la même chose entre le PC et le Raspberry. Nous avons dès lors atteint notre objectif, à savoir envoyer des instructions depuis le PC, vers le Raspberry.
 
 \chapter{Qui a fait quoi}
 
