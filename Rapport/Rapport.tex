@@ -35,28 +35,42 @@
 
 \chapter{Introduction}
 
-Décrire le but visé, l'utilité du robot.
+Nous avons imaginé le concept de \textbf{BotCop}, car la sécurité est devenu un thème central pour les habitations modernes. En effet, 75.000 cambriolages ont eu lieu en 2012 et en 2013 en Belgique \footnote{Source : \url{https://www.besafe.be/fr/diw/belgi-belgique}, visité le 13 août 2015}.
+
+Bien que de plus en plus d'habitations soient équipées de systèmes de surveillance électronique, ceux-ci ne sont pas toujours fiables. Ces systèmes sont généralement basés sur des capteurs de température et de mouvements, et peuvent se déclencher sans raison en été, lorsque les températures sont hautes.
+
+Les systèmes de surveillance avec caméra sont très couteux. Notre projet permettrait, en complément avec un système meilleur marché, d'obtenir des images en temps réel de notre maison.
+
+Installer une caméra fixe n'est pas très utile, à moins de ne vouloir surveiller qu'une seule pièce. Il faut donc pouvoir déplacer cette caméra. Voilà donc pourquoi nous avons voulu créer un robot.
+
+Concrètement, BotCop pourra se déplacer dans toute la maison et renvoyer l'image filmée par sa caméra à l'utilisateur.
+
+L'utilisateur pourra donc :
+
+\bigbreak
+\begin{itemize}
+\item Contrôler le robot pour le déplacer,
+\item Contrôler la caméra, pour pouvoir regarder dans n'importe quelle direction,
+\item Visionner graphiquement le trajet vu du dessus dans l'interface
+\end{itemize}
+
+
 
 Faire en français et en anglais !
 
-\begin{figure}[hf!]
-\center
-\includegraphics[scale=0.6]{images/GraphMateriel.png}
-\caption{Matériel}
-\end{figure}
+%\begin{figure}[hf!]
+%\center
+%\includegraphics[scale=0.6]{images/GraphMateriel.png}
+%\caption{Matériel}
+%\end{figure}
 
 \chapter{Matériel} \label{Matériel}
 
-%Lister le matériel utilisé, justifier sa présence
-%
-%- Raspberry (pourquoi pas un Arduino, par exemple ?)
-%- Moteurs (quel modèle ?)
-%- Contrôleur (expliquer son utilité)
-%- Batterie
-%- Clé wifi
-%- Webcam (caractéristiques techniques)
-%- Réseau Wi-Fi opérationnel
-%- ?
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.8]{images/ArchitectureMaterielle.png}
+\caption{Architecture matérielle, et types de communication}
+\end{figure}
 
 Voici la liste complète du matériel que nous avons utilisé :
 
@@ -78,7 +92,7 @@ Voici la liste complète du matériel que nous avons utilisé :
 \caption{Robot complet}
 \end{figure}
 
-\paragraph{Raspberry Pi} Nous avons donc utilisé deux modèles de raspberry pi lors de notre projet le Raspberry Pi B+ et le Raspberry Pi 2. 
+\paragraph{Raspberry Pi} Nous avons donc utilisé deux modèles de Raspberry pi lors de notre projet : le Raspberry Pi B+ et le Raspberry Pi 2. 
 Bien que visuellement, ces deux modèles se ressemblent très fort, leurs caractéristiques sont différentes :
 
 \begin{tabular}{l|p{4.5 cm}|p{4.5 cm}}
@@ -156,6 +170,96 @@ Prix & environ 10 \euro & environ 12 \euro \\
 %
 %Pour chaque période, on envoie une tension continue de 5 volts (qui correspond à la tension de base du Raspberry Pi, délivrée sur les ports GPIO) pendant une fraction de la période seulement. La tension « perçue » par le moteur est directement proportionnelle à cette fraction. Si cette fraction vaut par exemple 60 \%, le moteur tournera comme si on envoyait 3 V, donc à 60 \% de son régime maximum, si sa tension nominale est de 5 V. 
 
+\chapter{Implémentation}
+
+\section{Le premier robot}
+
+Nous avions , dans un premiers temps, travaillé avec le Raspberry pi B+ et un contrôleur DC (DRV8833) pouvant gérer deux moteurs (1.2 A , 2.7-10.8 V ). Cette solution, peut couteuse, nous a permis de travailler avec les pins GPIO du Raspberry.
+
+Nos moteurs fonctionnaient avec une tension de 5 V, et étaient directement alimentés par ces pins. Nous avons beaucoup travaillé sur la partie électronique afin d'assembler au mieux un robot. Nous avions d'abord pensé implémenter directement dans le code l'envoi de signaux PWM dans les ports GPIO, avec une boucle dans le programme qui se répète toutes les 50 millisecondes et qui, selon les commandes envoyées, permet de faire avancer, tourner ou reculer le robot.
+
+Les signaux PWM (Pulse Width Modulation) sont une technique qui nous permet d'obtenir une réponse analogique à partir d'un système fonctionnant en tout ou rien (système discret). Ce sont donc des ondes carrées dont le rapport de la largeur sur chaque période nous donne, dans ce cas-ci, la valeur de notre vitesse.
+La largeur de pulsation correspond au laps de temps au cours duquel le système a la valeur 1 (5 V). Cette largeur rapportée sur l'entièreté de la période, nous donne le pourcentage d'activité, le Duty Cycle.
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.4]{images/PWM/totzal.png}
+\caption{Principe des signaux PWM}
+\end{figure}
+
+Mais dans nos recherches, nous nous sommes aperçus que des librairies existaient déjà, et permettaient d'envoyer des signaux avec une seule commande, qui prenaient comme paramètre la vitesse relative des moteurs (100\% pour faire tourner le moteur à pleine vitesse vers l'avant, par exemple) 
+
+Néanmoins, la qualité du matériel en notre possession n'était pas optimale : nous n'arrivions pas a fixer correctement les roues sur les axes des moteurs, et nous avons grillé le contrôleur DC lors de nos manipulations.
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.5]{images/y.jpg}
+\caption{Contrôleur DRV8833}
+\end{figure}
+
+Nous avons réalisé à ce moment l'importance d'une bonne organisation de notre travail : nous avons opté pour une réalisation du projet étape par étape : c'est-à-dire que pour chaque chose à faire, nous la découpons en petites tâches "plus simples". Cette méthode présente deux avantages : nous voyons notre progression, car chaque étape est un pas vers la solution définitive, et si nous rencontrons un problème, nous pouvons revenir à une étape antérieure que nous savons fonctionnelle.
+
+\section{Construction du second robot}
+
+%Nous avons donc pris l'initiative de changer pour un kit qui nous permettrait de gagner du temps sur la partie électronique en utilisant une carte Arduino pour commander les moteurs, et surtout qui est  ayant des roues et un chassis adapté à nos envies.
+Nous avons donc pris l'initiative de changer pour un kit qui nous permet d'avoir des composants compatibles entre eux, et de meilleure qualité.
+%Les servo-moteurs étant géré par le raspberry afin de pouvoir jouer avec la caméra.
+Les moteurs sont donc directement relié aux pins de la carte Arduino, elle-même reliée au Raspberry avec un câble USB.
+L'ensemble du matériel utilisé est décrit en détail au chapitre \ref{Matériel}. La carte Arduino sert à rajouter une couche d'abstraction. Concrètement, cela permet de ne gérer que de la communication sur le Raspberry. Le contrôle des moteurs est géré par la carte Arduino. En travaillant comme cela, nous ne devons plus gérer la partie électronique (génération de signaux PWM, ...).
+
+\subsection{Communication entre un PC et un Raspberry Pi}
+
+Pour notre robot, la création d'une connexion Socket entre un PC et un Raspberry était nécessaire.
+
+La première étape est de créer une connexion entre un PC et ce même PC. Nous avons trouvé plusieurs exemples sur internet qui fonctionnent. Mais nous avons voulu aller plus loin pour cette étape : 
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.6]{images/Socket1.png}
+\caption{Première étape}
+\end{figure}
+
+\begin{itemize}
+\item Ne pas envoyer une chaîne de caractère directement du code, mais la demander à l'utilisateur.
+\item Traiter la chaîne reçue sur l'autre programme, simplement l'afficher, afficher le premier caractère, ou si nous envoyons un nombre (envoyé sous forme de chaîne), récupérer ce nombre et effectuer une opération mathématique simple.
+\item Envoyer une chaîne (n'importe quoi, cela n'a pas d'importance), puis dès que l'autre programme reçoit cette chaîne, renvoyer une autre chaîne.
+\item Sur le PC, gérer avec Python les dates.
+\end{itemize}
+
+\bigbreak
+
+Ainsi avec quelques étapes "faciles", nous pouvons affirmer :
+
+\bigbreak
+
+\begin{itemize}
+\item Nous savons ouvrir une connexion,
+\item Nous pouvons envoyer n'importe quelle information "simple" (types de données courants),
+\item Nous savons la récupérer et la traiter de l'autre coté,
+\item Nous savons estimer le temps que ça prend pour l'envoi (lors de nos tests, l'aller-retour prenait environ 0.7 secondes).
+\item Nous savons comment fonctionne le code, car au lieu de recopier bêtement d'internet, nous l'avons modifié en cherchant à comprendre son fonctionnement.
+\end{itemize}
+
+\bigbreak
+
+Ensuite, nous avons répété les mêmes processus entre un PC (sous Windows) et une machine virtuelle (sous Debian). Ces étapes sont normalement immédiates, puisque tous les codes ont déjà été écrits à l'étape précédente.
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.6]{images/Socket2.png}
+\caption{Deuxième étape}
+\end{figure}
+
+\bigbreak
+
+Enfin, nous avons refait la même chose entre le PC et le Raspberry. Nous avons dès lors atteint notre objectif, à savoir envoyer des instructions depuis le PC, vers le Raspberry.
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.6]{images/Socket3.png}
+\caption{Troisième étape}
+\end{figure}
+
 \chapter{Organisation}
 
 \begin{figure}[hf!]
@@ -169,14 +273,14 @@ Notre code est divisé en trois parties :
 \bigbreak
 
 \begin{itemize}
-\item La partie client, qui tourne sur un PC (sous Windows, Linux, ...),
-\item La partie serveur, qui se trouve sur le Raspberry Pi,
-\item La partie contrôle, qui se trouve sur la carte Arduino.
+\item La partie Client, qui se trouve sur un PC (sous Windows, Linux, ...),
+\item La partie Serveur, qui se trouve sur le Raspberry Pi,
+\item La partie Contrôle, qui se trouve sur la carte Arduino.
 \end{itemize}
 
-\bigbreak
+\section{PC}
 
-\paragraph{Client.py} sert à communiquer avec le Raspberry Pi. C'est dans ce fichier que sont récupérées toutes les requêtes de l'utilisateur, lorsqu'il appuie sur un bouton, par exemple.
+\paragraph{Client.py} sert à communiquer avec le Raspberry Pi. C'est dans ce fichier que sont récupérées toutes les requêtes de l'utilisateur, lorsqu'il appuie sur un bouton, par exemple. A chaque fois qu'un bouton est poussé, une instruction est envoyée. Lorsque le bouton est relâché, une instruction \verb=Stop= est envoyée.
 
 \paragraph{GUI.py} sert à tracer l'interface graphique. Nous avons voulu créer des fonctions dans ce fichier et les lier directement au bouton comme ci-après :
 
@@ -192,23 +296,53 @@ GUI.buttonstop.bind("<Button-1>", buttonstopclick)
 
 Cette seconde option présente deux avantages : on peut choisir le type d'événement à associer (bouton cliqué ou relâché, ...), et on peut aussi supprimer ce lien (avec la commande \verb=unbind=).
 
-\paragraph{Server.py} est le programme qui tourne sur le Raspberry Pi. Son but est de recevoir les messages (depuis le client) et de les interpréter pour envoyer des instructions au robot.
+\section{Raspberry Pi}
+
+\paragraph{Server.py} est le programme qui tourne sur le Raspberry Pi. Son but est de recevoir les messages (depuis \textit{Client.py}, sur le PC) et de les interpréter pour envoyer des instructions au robot.
 
 \paragraph{PiRobot.py} est une classe qui contient toutes les fonctions d'envoi de commandes au robot, ainsi quand \textit{Server.py} reçoit un message, il n'a qu'à appeler la bonne fonction (par exemple la fonction \verb=Stop=, qui envoie une commande au robot pour arrêter les moteurs).
 
-\paragraph{Python 3.2.3} est la version de l'interpréteur utilisé. Nous précisons ce détail, car certaines fonctionnalités que nous utilisons ne portent pas les mêmes noms dans d'autres versions de Python, ou n'existent tout simplement pas.
+A chaque instruction reçue, une nouvelle chaîne de caractère est crée. Elle se présente de la manière suivante :
+
+\begin{verbatimtab}[3]
+F180F180090020
+\end{verbatimtab}
+
+On peut la décomposer en quatre parties :
+
+\begin{verbatimtab}[3]
+F180 F180 090 020
+\end{verbatimtab}
+
+Les deux premières parties sont les instructions pour les moteurs (le gauche puis le droit). La lettre (\verb=F= ou \verb=B=) indique le sens (AVANT ou ARRIÈRE), et les trois chiffres suivants indiquent la vitesse relative (255 pour 100\% de la vitesse).
+
+La troisième partie donne l'angle horizontal de la de la caméra (PAN). Par exemple \verb=090= sert à orienter la caméra droit devant le robot.
+
+La quatrième partie donne l'angle vertical de la caméra (TILT).
+
+Enfin, cela n'est pas indiqué, mais la chaîne se termine par un caractère \verb=\newline=, pour que le programme \textit{ControlMotors.ino} sache que la chaîne est terminée. 
+
+\section{Arduino}
+
+\paragraph{ControlMotors.ino} reçoit la chaine d'instructions depuis le Raspberry, et la découpe pour envoyer les instructions à chaque moteur. Cette action est répétée à chaque fois qu'un caractère \verb=\newline= est reçu.
+
+\section{Informations supplémentaires}
+
+\paragraph{Python 3} est la version de l'interpréteur utilisé. Nous précisons ce détail, car certaines fonctionnalités que nous utilisons ne portent pas les mêmes noms dans d'autres versions de Python, ou n'existent tout simplement pas. Sur le Raspberry, c'est la version 3.4, tandis que sur le PC, c'est la version 3.2.3. Il ne faut pas utiliser Python 2.7, car la compatibilité des programmes n'est pas assurée.
 
 \paragraph{Tkinter} sert à tracer l'interface graphique. Il permet d'organiser assez facilement les éléments dans la fenêtre graphique.
 
-\paragraph{Socket} permet d'ouvrir une connection entre une machine hôte (appelée Serveur) et une ou plusieurs machines (appelées Clients). Une fois la connection établie, les commandes \verb=send= et \verb=recv= permettent d'échanger des données.
+\paragraph{Socket} permet d'ouvrir une connexion entre une machine hôte (appelée Serveur) et une ou plusieurs machines (appelées Clients). Une fois la connexion établie, les commandes \verb=send= et \verb=recv= permettent d'échanger des données.
 
-\paragraph{Logging} sert à générer un fichier \text{.log}, contenant diverses informations. A titre d'exemple, la commande suivante est appelée dans la fonction \verb=buttonstopclick= :
+\paragraph{Serial} permet d'ouvrir une connexion entre la carte Arduino et le Raspberry. La carte Arduino va se mettre à l'écoute sur un port choisi par l'utilisateur (port \verb=\ttyUSB0=). 
+
+\paragraph{Logging} sert à protocoler des informations, en les stockant dans un fichier \text{.log}. Par exemple, la commande suivante est appelée dans la fonction \verb=buttonstopclick= :
 
 \begin{verbatimtab}[3]
 logging.debug('Button STOP click')
 \end{verbatimtab}
 
-Dans le fichier \text{.log}, on verra cette ligne :
+Dans le fichier \text{.log}, nous verrons cette ligne apparaître :
 
 \begin{verbatimtab}[3]
 2015-07-28 18:06:08,051 root	DEBUG	Button STOP click
@@ -219,8 +353,8 @@ C'est une alternative au \verb=print('Button STOP click')=, et qui permet de sau
 \paragraph{Github} est un système de contrôle de révision, et peut être utilisé pour plusieurs choses :
 
 \begin{itemize}
-\item Garder une copie des codes. C'est la raison principale. Si l'ordinateur ou le Raspberry rencontre un problème, le code est sauvegardé.
-\item Il permet aussi d'enregistrer plusieurs versions d'un code, en montrant qui l'a mis en ligne, quand cela a été fait, et les différences avec la version précédente. C'est utile si on se rend compte que les modifications apportées à un code rend celui-ci inutilisable, en permettant de retélécharger un code qu'on sait fonctionnel. Sur la figure \ref{GitHub}, on voit que Sero17 (c'est le pseudo de Raphaël) a modifié le fichier \url{ClientGUI\GUI.py} il y a dix jours.
+\item Il permet d'enregistrer plusieurs versions d'un code, en montrant qui l'a mis en ligne, quand cela a été fait, et les différences avec la version précédente. C'est utile si nous nous rendons compte que les modifications apportées à un code rend celui-ci inutilisable, en permettant de retélécharger un code que nous savons fonctionnel. Sur la figure \ref{GitHub}, on voit que Sero17 (c'est le pseudo de Raphaël) a modifié le fichier \url{ClientGUI\GUI.py} il y a dix jours.
+\item Il permet aussi de garder une copie des codes. Si l'ordinateur ou le Raspberry rencontre un problème, le code est sauvegardé.
 
 \begin{figure}[hf!]
 \center
@@ -231,91 +365,27 @@ C'est une alternative au \verb=print('Button STOP click')=, et qui permet de sau
 
 \end{itemize}
 
-\chapter{Implémentation}
+\chapter{Le programme en action !}
 
-\section{Le premier robot}
+Pour contrôler le robot, il faut démarrer les programmes dans le bon ordre. Voici la marche à suivre :
 
-Nous avions , dans un premiers temps, travaillé avec le Raspberry pi B+ et un contrôleur DC (DRV8833) pouvant gérer deux moteurs (1.2 A , 2.7-10.8 V ). Cette solution, peut couteuse, nous a permis de travailler avec les pins GPIO du Raspberry.
+\paragraph{Arduino} La première chose à faire est de télécharger le code sur la carte Arduino. Pour cela, démarrez l'IDE Arduino, et ouvrez le fichier .ino que vous voulez mettre sur la carte.
 
-Nos moteurs fonctionnaient avec une tension de 5 V, et étaient directement alimentés par ces pins. Nous avons beaucoup travaillé sur la partie électronique afin d'assembler au mieux un robot. Nous avions d'abord pensé implémenter directement dans le code l'envoi de signaux PWM dans les ports GPIO, avec une boucle dans le programme qui se répète toutes les 50 millisecondes et qui, selon les commandes envoyées, permet de faire avancer, tourner ou reculer le robot.
+Sélectionnez le modèle de carte, le bon port et le bon programmeur.
 
-Mais dans nos recherches, nous nous sommes aperçus que des librairies existaient déjà, et permettaient d'envoyer des signaux avec une seule commande, qui prenaient comme paramètre la vitesse relative des moteurs (100\% pour faire tourner le moteur à pleine vitesse vers l'avant, par exemple) 
+Vérifiez le code, et téléversez-le sur la carte.
 
-Néanmoins, la qualité du matériel en notre possession n'était pas optimale : nous n'arrivions pas a fixer correctement les roues sur les axes des moteurs, et nous avons grillé le contrôleur DC lors de nos manipulations.
+Notez que la carte Arduino peut garder en mémoire un programme, même si elle est mise hors tension.
 
-\begin{figure}[hf!]
-\center
-\includegraphics[scale=0.5]{images/y.jpg}
-\caption{Contrôleur DRV8833}
-\label{GitHub}
-\end{figure}
-
-Nous avons réalisé à ce moment l'importance d'une bonne organisation de notre travail : nous avons opté pour une réalisation du projet étape par étape : c'est-à-dire que pour chaque chose à faire, on la découpe en petites tâches "plus simples". Cette méthode présente deux avantages : on voit notre progression, car chaque étape est un pas vers la solution définitive, et si on rencontre un problème, on peut revenir à une étape antérieure qu'on sait fonctionnelle.
-
-\section{Construction du second robot}
-
-%Nous avons donc pris l'initiative de changer pour un kit qui nous permettrait de gagner du temps sur la partie électronique en utilisant une carte Arduino pour commander les moteurs, et surtout qui est  ayant des roues et un chassis adapté à nos envies.
-Nous avons donc pris l'initiative de changer pour un kit qui nous permet d'avoir des composants compatibles entre eux, et de meilleure qualité.
-%Les servo-moteurs étant géré par le raspberry afin de pouvoir jouer avec la caméra.
-Les moteurs sont donc directement relié aux pins de la carte Arduino, elle-même reliée au Raspberry avec un câble USB.
-L'ensemble du matériel utilisé est décrit en détail au chapitre \ref{Matériel}.
-
-\section{PWM}
-
-Les signaux PWM (Pulse Width Modulation) sont une technique qui nous permet d'obtenir une réponse analogique à partir d'un système fonctionnant en tout ou rien (système discret). Ce sont donc des ondes carrées dont le rapport de la largeur sur chaque période nous donne, dans ce cas-ci, la valeur de notre vitesse.
-La largeur de pulsation correspond au laps de temps au cours duquel le système a la valeur 1 (5 V). Cette largeur rapportée sur l'entièreté de la période, nous donne le pourcentage d'activité, le Duty Cycle.
-
-\begin{figure}[hf!]
-\center
-\includegraphics[scale=0.4]{images/PWM/totzal.png}
-\caption{Principe des signaux PWM}
-\label{GitHub}
-\end{figure}
-
-\section{Socket}
-
-Pour notre robot, la création d'une connection Socket entre un PC et un Raspberry était nécessaire.
-
-La première étape est de créer une connection entre un PC et ce même PC. Nous avons trouvé plusieurs exemples sur internet qui fonctionnent. Mais nous avons voulu aller plus loin pour cette étape : 
-
-\bigbreak
-
-\begin{itemize}
-\item Ne pas envoyer une chaîne de caractère directement du code, mais la demander à l'utilisateur.
-\item Traiter la chaîne reçue sur l'autre programme, simplement l'afficher, afficher le premier caractère, ou si on envoie un nombre (envoyé sous forme de chaîne), récupérer ce nombre et effectuer une opération mathématique simple.
-\item Envoyer une chaîne (n'importe quoi, cela n'a pas d'importance), puis dès que l'autre programme reçoit cette chaîne, renvoyer une autre chaîne.
-\item Sur le PC, gérer avec Python les dates.
-\end{itemize}
-
-\bigbreak
-
-Ainsi avec quelques étapes "faciles", on peut affirmer :
-
-\bigbreak
-
-\begin{itemize}
-\item On sait ouvrir une connection,
-\item On peut envoyer n'importe quelle information "simple" (types de données courants),
-\item On sait la récupérer et la traiter de l'autre coté,
-\item On sait estimer le temps que ça prend pour l'envoi (lors de nos tests, l'aller-retour prenait environ 0.7 secondes).
-\item On sait comment fonctionne le code, car au lieu de recopier bêtement d'internet, on l'a modifié en cherchant à comprendre son fonctionnement.
-\end{itemize}
-
-\bigbreak
-
-Ensuite, nous avons répété les mêmes processus entre un PC (sous Windows) et une machine virtuelle (sous Debian). Ces étapes sont normalement immédiates, puisque tous les codes ont déjà été écrits à l'étape précédente.
-
-\bigbreak
-
-Enfin, nous avons refait la même chose entre le PC et le Raspberry. Nous avons dès lors atteint notre objectif, à savoir envoyer des instructions depuis le PC, vers le Raspberry.
+\paragraph{Raspberry Pi} %Ecran clavier souris, ou Putty
 
 \chapter{Qui a fait quoi}
 
 Raphaël
 
-Recherches sur connection socket
+Recherches sur connexion socket
 
-Programme client, interface, programme serveur sur raspberry, connection serial avec arduino
+Programme client, interface, programme serveur sur raspberry, connexion serial avec arduino
 Backup régulier des codes sur GitHub, ...
 
 \chapter{Conclusion}

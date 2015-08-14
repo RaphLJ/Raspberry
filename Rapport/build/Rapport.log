@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.12)  12 AUG 2015 11:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.12)  14 AUG 2015 14:54
 entering extended mode
 **Rapport.tex
 
@@ -850,14 +850,7 @@ File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 )))
 (C:\Users\Raphael\Documents\Ecole\UMONS_FPMs\3ème\ProjetIG\Raspberry\Rapport\b
-uild\Rapport.aux
-
-LaTeX Warning: Label `GitHub' multiply defined.
-
-
-LaTeX Warning: Label `GitHub' multiply defined.
-
-)
+uild\Rapport.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
@@ -1061,154 +1054,216 @@ LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
 
 ]
 Chapitre 1.
-<images/GraphMateriel.png, id=15, 558.085pt x 246.9225pt>
-File: images/GraphMateriel.png Graphic file (type png)
-
-<use images/GraphMateriel.png>
-Package pdftex.def Info: images/GraphMateriel.png used on input line 44.
-(pdftex.def)             Requested size: 334.85359pt x 148.15462pt.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 38.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 38.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 38.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 38.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 38.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 38.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 38.
  [2
 
- <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
-images/GraphMateriel.png>]
+]
 Chapitre 2.
+<images/ArchitectureMaterielle.png, id=19, 533.3526pt x 58.2978pt>
+File: images/ArchitectureMaterielle.png Graphic file (type png)
+
+<use images/ArchitectureMaterielle.png>
+Package pdftex.def Info: images/ArchitectureMaterielle.png used on input line 7
+1.
+(pdftex.def)             Requested size: 426.68265pt x 46.63829pt.
+
 <images/kit.jpg, id=21, 1284.8pt x 1167.36125pt>
 File: images/kit.jpg Graphic file (type jpg)
  <use images/kit.jpg>
-Package pdftex.def Info: images/kit.jpg used on input line 77.
+Package pdftex.def Info: images/kit.jpg used on input line 91.
 (pdftex.def)             Requested size: 256.95544pt x 233.46811pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <images/modelB+.jpg, id=22, 1284.8pt x 856.19875pt>
 File: images/modelB+.jpg Graphic file (type jpg)
  <use images/modelB+.jpg>
-Package pdftex.def Info: images/modelB+.jpg used on input line 100.
+Package pdftex.def Info: images/modelB+.jpg used on input line 114.
 (pdftex.def)             Requested size: 256.95544pt x 171.23671pt.
 
-Overfull \hbox (52.09698pt too wide) in paragraph at lines 100--101
+Overfull \hbox (52.09698pt too wide) in paragraph at lines 114--115
  [] 
  []
 
 <images/model2.jpg, id=23, 445.665pt x 317.185pt>
 File: images/model2.jpg Graphic file (type jpg)
  <use images/model2.jpg>
-Package pdftex.def Info: images/model2.jpg used on input line 108.
+Package pdftex.def Info: images/model2.jpg used on input line 122.
 (pdftex.def)             Requested size: 178.26283pt x 126.87173pt.
 
-[3
-
- <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
-images/kit.jpg>] <images/mini_driver.jpg, id=27, 261.4794pt x 305.0593pt>
+<images/mini_driver.jpg, id=24, 261.4794pt x 305.0593pt>
 File: images/mini_driver.jpg Graphic file (type jpg)
 
 <use images/mini_driver.jpg>
-Package pdftex.def Info: images/mini_driver.jpg used on input line 128.
+Package pdftex.def Info: images/mini_driver.jpg used on input line 142.
 (pdftex.def)             Requested size: 130.73936pt x 152.52927pt.
 
-<images/Mini_Driver_MkII.jpg, id=28, 144.54pt x 154.176pt>
+<images/Mini_Driver_MkII.jpg, id=25, 144.54pt x 154.176pt>
 File: images/Mini_Driver_MkII.jpg Graphic file (type jpg)
 
 <use images/Mini_Driver_MkII.jpg>
-Package pdftex.def Info: images/Mini_Driver_MkII.jpg used on input line 136.
+Package pdftex.def Info: images/Mini_Driver_MkII.jpg used on input line 150.
 (pdftex.def)             Requested size: 144.53963pt x 154.1756pt.
- [4 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rappo
-rt/images/modelB+.jpg> <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/Proje
-tIG/Raspberry/Rapport/images/model2.jpg> <C:/Users/Raphael/Documents/Ecole/UMON
-S_FPMs/3ème/ProjetIG/Raspberry/Rapport/images/mini_driver.jpg> <C:/Users/Rapha
-el/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/images/Mini_Driv
-er_MkII.jpg>]
-Chapitre 3.
-<images/GraphLogiciel.png, id=33, 684.5575pt x 179.67125pt>
-File: images/GraphLogiciel.png Graphic file (type png)
-
-<use images/GraphLogiciel.png>
-Package pdftex.def Info: images/GraphLogiciel.png used on input line 163.
-(pdftex.def)             Requested size: 410.73766pt x 107.80356pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 183.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-Overfull \hbox (7.82452pt too wide) in paragraph at lines 197--198
-\T1/futs/m/n/12 bot, ainsi quand \T1/futs/m/it/12 Ser-ver.py \T1/futs/m/n/12 re
--�oit un mes-sage, il n'a qu'� ap-pe-ler la bonne fonc-tion (par exemple
- []
-
-[5
+ [3
 
  <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
-images/GraphLogiciel.png>] <images/GitHub.png, id=40, 578.16pt x 981.6675pt>
-File: images/GitHub.png Graphic file (type png)
+images/ArchitectureMaterielle.png>]
+[4 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rappor
+t/images/kit.jpg> <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/R
+aspberry/Rapport/images/modelB+.jpg> <C:/Users/Raphael/Documents/Ecole/UMONS_FP
+Ms/3ème/ProjetIG/Raspberry/Rapport/images/model2.jpg>] [5 <C:/Users/Raphael/Do
+cuments/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/images/mini_driver.jp
+g> <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rappor
+t/images/Mini_Driver_MkII.jpg>]
+Chapitre 3.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 175.
+<images/PWM/totzal.png, id=37, 890.5772pt x 408.77719pt>
+File: images/PWM/totzal.png Graphic file (type png)
 
-<use images/GitHub.png>
-Package pdftex.def Info: images/GitHub.png used on input line 227.
-(pdftex.def)             Requested size: 404.70924pt x 687.16257pt.
+<use images/PWM/totzal.png>
+Package pdftex.def Info: images/PWM/totzal.png used on input line 186.
+(pdftex.def)             Requested size: 356.22456pt x 163.50797pt.
+ [6
 
+ <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
+images/PWM/totzal.png>]
+<images/y.jpg, id=42, 264.99pt x 264.99pt>
+File: images/y.jpg Graphic file (type jpg)
+ <use images/y.jpg>
+Package pdftex.def Info: images/y.jpg used on input line 196.
+(pdftex.def)             Requested size: 132.49467pt x 132.49467pt.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 210.
 
-LaTeX Warning: Float too large for page by 8.87947pt on input line 230.
+<images/Socket1.png, id=43, 233.1912pt x 158.0304pt>
+File: images/Socket1.png Graphic file (type png)
+ <use images/Socket1.png>
+Package pdftex.def Info: images/Socket1.png used on input line 218.
+(pdftex.def)             Requested size: 139.91579pt x 94.81895pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] [7 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Ra
-pport/images/GitHub.png>]
+[7 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rappor
+t/images/y.jpg>] <images/Socket2.png, id=47, 260.6538pt x 158.0304pt>
+File: images/Socket2.png Graphic file (type png)
+
+<use images/Socket2.png>
+Package pdftex.def Info: images/Socket2.png used on input line 249.
+(pdftex.def)             Requested size: 156.39346pt x 94.81895pt.
+ <images/Socket3.png, id=48, 320.397pt x 87.6876pt>
+File: images/Socket3.png Graphic file (type png)
+
+<use images/Socket3.png>
+Package pdftex.def Info: images/Socket3.png used on input line 259.
+(pdftex.def)             Requested size: 192.23967pt x 52.61296pt.
+ [8 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rappo
+rt/images/Socket1.png> <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/Proje
+tIG/Raspberry/Rapport/images/Socket2.png> <C:/Users/Raphael/Documents/Ecole/UMO
+NS_FPMs/3ème/ProjetIG/Raspberry/Rapport/images/Socket3.png>]
 Chapitre 4.
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 236.
-<images/y.jpg, id=48, 264.99pt x 264.99pt>
-File: images/y.jpg Graphic file (type jpg)
- <use images/y.jpg>
-Package pdftex.def Info: images/y.jpg used on input line 248.
-(pdftex.def)             Requested size: 132.49467pt x 132.49467pt.
- [8
+<images/GraphLogiciel.png, id=55, 341.275pt x 490.83376pt>
+File: images/GraphLogiciel.png Graphic file (type png)
+
+<use images/GraphLogiciel.png>
+Package pdftex.def Info: images/GraphLogiciel.png used on input line 267.
+(pdftex.def)             Requested size: 204.76657pt x 294.50252pt.
+ [9
 
  <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rapport/
-images/y.jpg>]
-<images/PWM/totzal.png, id=52, 890.5772pt x 408.77719pt>
-File: images/PWM/totzal.png Graphic file (type png)
+images/GraphLogiciel.png (PNG copy)>]
+Overfull \hbox (7.82452pt too wide) in paragraph at lines 303--304
+\T1/futs/m/n/12 bot, ainsi quand \T1/futs/m/it/12 Ser-ver.py \T1/futs/m/n/12 re
+-�oit un mes-sage, il n'a qu'� ap-pe-ler la bonne fonc-tion (par exemple
+ []
 
-<use images/PWM/totzal.png>
-Package pdftex.def Info: images/PWM/totzal.png used on input line 270.
-(pdftex.def)             Requested size: 356.22456pt x 163.50797pt.
- [9 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/Rappo
-rt/images/PWM/totzal.png>] [10]
+[10]
+Overfull \hbox (3.6516pt too wide) in paragraph at lines 339--340
+ \T1/futs/b/n/12 Log-ging[] \T1/futs/m/n/12 sert � pro-to-co-ler des in-for-ma-
+tions, en les sto-ckant dans un fi-chier []. Par exemple,
+ []
+
+
+Overfull \hbox (2.56667pt too wide) in paragraph at lines 356--357
+\T1/futs/m/n/12 gure 4.2[], on voit que Sero17 (c'est le pseudo de Ra-pha�l) a 
+mo-di-fi� le fi-chier $\T1/cmtt/m/n/12 ClientGUI \$
+ []
+
+<images/GitHub.png, id=64, 578.16pt x 981.6675pt>
+File: images/GitHub.png Graphic file (type png)
+ <use images/GitHub.png>
+Package pdftex.def Info: images/GitHub.png used on input line 361.
+(pdftex.def)             Requested size: 404.70924pt x 687.16257pt.
+
+
+LaTeX Warning: Float too large for page by 8.87947pt on input line 364.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11] [12 <C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Raspberry/
+Rapport/images/GitHub.png>]
 Chapitre 5.
-[11
+
+Overfull \hbox (2.96437pt too wide) in paragraph at lines 370--371
+[]\T1/futs/m/n/12 Pour contr�-ler le ro-bot, il faut d�-mar-rer les pro-grammes
+ dans le bon ordre. Voici la marche
+ []
+
+[13
 
 ]
 Chapitre 6.
-[12
+[14
+
+]
+Chapitre 7.
+[15
 
 ]
 Annexe A.
-[13
+[16
 
-] [14]
+] [17]
 (C:\Users\Raphael\Documents\Ecole\UMONS_FPMs\3ème\ProjetIG\Raspberry\Rapport\b
-uild\Rapport.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+uild\Rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 6958 strings out of 493921
- 98032 string characters out of 3147275
- 163706 words of memory out of 3000000
- 10050 multiletter control sequences out of 15000+200000
- 101449 words of font info for 95 fonts, out of 3000000 for 9000
+ 7008 strings out of 493921
+ 98852 string characters out of 3147275
+ 165706 words of memory out of 3000000
+ 10090 multiletter control sequences out of 15000+200000
+ 134205 words of font info for 128 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,9n,75p,516b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Rapha
-el\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ad
-obe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uh
-vr8a.pfb>
+ 36i,9n,75p,537b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc
+} <C:\Users\Raphael\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ectt1200.pk> <C:\Users\Raphael\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ectt1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/eurosy
+m/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/urw/helvetic/uhvr8a.pfb>
 Output written on C:/Users/Raphael/Documents/Ecole/UMONS_FPMs/3ème/ProjetIG/Ra
-spberry/Rapport/build/Rapport.pdf (15 pages, 2267116 bytes).
+spberry/Rapport/build/Rapport.pdf (18 pages, 2304977 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 198 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
