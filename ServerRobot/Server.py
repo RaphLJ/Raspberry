@@ -51,6 +51,8 @@ while 1:
             if message=="STOP":
                 robot.stop()
             if message[:3]=="PAN":
+                newPan=int(message[3:])
                 robot.cameraPan()
             if message[:4]=="TILT":
+                newTilt=int(message[4:])
                 robot.cameraTilt()

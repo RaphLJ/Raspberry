@@ -22,3 +22,12 @@ class maClasse:
 
 laclasse = maClasse()
 laclasse.sendCommand()
+
+x='TILT280'
+y=x[4:]
+print(x[:4])
+print(y)
+
+int(y)
+
+print(2*int(y))

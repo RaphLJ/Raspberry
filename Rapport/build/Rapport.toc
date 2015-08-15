@@ -27,8 +27,8 @@
 \contentsline {chapter}{\numberline {5}Le programme en action !}{13}
 \contentsline {paragraph}{Arduino}{13}
 \contentsline {paragraph}{Raspberry Pi}{13}
-\contentsline {chapter}{\numberline {6}Qui a fait quoi}{14}
-\contentsline {chapter}{\numberline {7}Conclusion}{15}
-\contentsline {chapter}{\numberline {A}Proc\IeC {\'e}dure d'installation}{16}
-\contentsline {section}{\numberline {A.1}Installation de Raspbian sur le Raspberry Pi}{16}
-\contentsline {section}{\numberline {A.2}Configurer le WiFi sur le Raspberry Pi}{17}
+\contentsline {chapter}{\numberline {6}Qui a fait quoi}{15}
+\contentsline {chapter}{\numberline {7}Conclusion}{16}
+\contentsline {chapter}{\numberline {A}Proc\IeC {\'e}dure d'installation}{17}
+\contentsline {section}{\numberline {A.1}Installation de Raspbian sur le Raspberry Pi}{17}
+\contentsline {section}{\numberline {A.2}Configurer le WiFi sur le Raspberry Pi}{18}

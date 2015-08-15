@@ -11,13 +11,15 @@ class PiRobot:
         self.leftMotorSpeed = 0
         self.rightMotorDir = "F"
         self.rightMotorSpeed = 0
+        self.panPosition = 90
+        self.tiltPosition = 20
 
     def __del__(self):
         self.ser.close()
 
     def sendCommand(self):
 
-        command = '{0:1s}{1:03d}{2:1s}{3:03d}\n'.format(self.leftMotorDir, self.leftMotorSpeed, self.rightMotorDir, self.rightMotorSpeed)
+        command = '{0:1s}{1:03d}{2:1s}{3:03d}{4:03d}{5:03d}\n'.format(self.leftMotorDir, self.leftMotorSpeed, self.rightMotorDir, self.rightMotorSpeed, self.panPosition, self.tiltPosition)
 
         logging.debug("Commande a envoyer :" + command)
         self.ser.write(command.encode())
@@ -63,11 +65,15 @@ class PiRobot:
         self.rightMotorSpeed = 0
         self.sendCommand()
 
-    def cameraPan(self):
-        logging.debug("CameraPan")
+    def cameraPan(self, newPan):
+        logging.debug("CameraPan " + newPan)
+        self.panPosition = newPan
+        self.sendCommand()
 
-    def cameraTilt(self):
-        logging.debug("CameraTilt")
+    def cameraTilt(self, newTilt):
+        logging.debug("CameraTilt " + newTilt)
+        self.tiltPosition = newTilt
+        self.sendCommand()
 
 
 

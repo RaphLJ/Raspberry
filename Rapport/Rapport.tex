@@ -371,13 +371,33 @@ Pour contrôler le robot, il faut démarrer les programmes dans le bon ordre. Vo
 
 \paragraph{Arduino} La première chose à faire est de télécharger le code sur la carte Arduino. Pour cela, démarrez l'IDE Arduino, et ouvrez le fichier .ino que vous voulez mettre sur la carte.
 
-Sélectionnez le modèle de carte, le bon port et le bon programmeur.
+Dans \verb=Outils=, sélectionnez le modèle de carte (\verb=Arduino Nano w/ATmega328=), le port (\verb=ttyUSB0=) et le programmeur (\verb=AVRISP mkII=).
 
 Vérifiez le code, et téléversez-le sur la carte.
 
 Notez que la carte Arduino peut garder en mémoire un programme, même si elle est mise hors tension.
 
-\paragraph{Raspberry Pi} %Ecran clavier souris, ou Putty
+\paragraph{Raspberry Pi} Il faut démarrer le programme \textit{Server.py} sur le Raspberry. Bien sur, on peut connecter un écran, un clavier et une souris. Dans ce cas, ouvrez un terminal, et allez dans le dossier ou se trouve le programme. Par exemple, si le programme se trouve dans le dossier \textit{ServerRobot}, qui se trouve sur le bureau, entrez :
+
+\begin{verbatimtab}[3]
+cd Desktop/ServerRobot/
+\end{verbatimtab}
+
+Une fois dans le bon dossier, démarrez le programme avec :
+
+\begin{verbatimtab}[3]
+python3 Server.py
+\end{verbatimtab}
+
+Ce n'est pas très intéressant d'avoir un robot relié à un écran avec un câble HDMI. On peut se connecter à distance au Raspberry en utilisant Putty\footnote{Téléchargez Putty sur \url{http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html}}. Introduisez l'adresse IP du Raspberry, le numéro de port (22), et le type de connexion (SSH). Lorsque la connexion sera établie, entrez l'identifiant \verb=pi= et le mot de passe \verb=raspberry=. Ensuite, il suffit de démarrer le programme comme décrit ci-dessus.
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.7]{images/Screen/Putty.png}
+\caption{Configuraton de Putty}
+\end{figure}
+
+
 
 \chapter{Qui a fait quoi}
 

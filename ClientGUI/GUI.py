@@ -68,6 +68,7 @@ def resetGraph(event):
     initGraph()
 
 master = Tk()
+master.title("BotCop")
 myFont = tkfont.Font(size=18)
 
 sizePoint = 2
