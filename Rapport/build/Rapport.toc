@@ -1,34 +1,46 @@
 \select@language {french}
 \contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {chapter}{\numberline {2}Mat\IeC {\'e}riel}{3}
-\contentsline {paragraph}{Kit}{3}
-\contentsline {paragraph}{Raspberry Pi}{3}
-\contentsline {paragraph}{Arduino}{3}
-\contentsline {chapter}{\numberline {3}Impl\IeC {\'e}mentation}{6}
-\contentsline {section}{\numberline {3.1}Le premier robot}{6}
-\contentsline {section}{\numberline {3.2}Construction du second robot}{7}
-\contentsline {subsection}{\numberline {3.2.1}Communication entre un PC et un Raspberry Pi}{7}
-\contentsline {chapter}{\numberline {4}Organisation}{9}
-\contentsline {section}{\numberline {4.1}PC}{9}
-\contentsline {paragraph}{Client.py}{9}
-\contentsline {paragraph}{GUI.py}{10}
-\contentsline {section}{\numberline {4.2}Raspberry Pi}{10}
-\contentsline {paragraph}{Server.py}{10}
-\contentsline {paragraph}{PiRobot.py}{10}
-\contentsline {section}{\numberline {4.3}Arduino}{10}
-\contentsline {paragraph}{ControlMotors.ino}{10}
-\contentsline {section}{\numberline {4.4}Informations suppl\IeC {\'e}mentaires}{11}
-\contentsline {paragraph}{Python 3}{11}
-\contentsline {paragraph}{Tkinter}{11}
-\contentsline {paragraph}{Socket}{11}
-\contentsline {paragraph}{Serial}{11}
-\contentsline {paragraph}{Logging}{11}
-\contentsline {paragraph}{Github}{11}
-\contentsline {chapter}{\numberline {5}Le programme en action !}{13}
-\contentsline {paragraph}{Arduino}{13}
-\contentsline {paragraph}{Raspberry Pi}{13}
-\contentsline {chapter}{\numberline {6}Qui a fait quoi}{15}
-\contentsline {chapter}{\numberline {7}Conclusion}{16}
-\contentsline {chapter}{\numberline {A}Proc\IeC {\'e}dure d'installation}{17}
-\contentsline {section}{\numberline {A.1}Installation de Raspbian sur le Raspberry Pi}{17}
-\contentsline {section}{\numberline {A.2}Configurer le WiFi sur le Raspberry Pi}{18}
+\contentsline {chapter}{\numberline {2}Mat\IeC {\'e}riel}{4}
+\contentsline {paragraph}{Kit}{4}
+\contentsline {paragraph}{Raspberry Pi}{4}
+\contentsline {paragraph}{Arduino}{4}
+\contentsline {chapter}{\numberline {3}Impl\IeC {\'e}mentation}{7}
+\contentsline {section}{\numberline {3.1}Le premier robot}{7}
+\contentsline {section}{\numberline {3.2}Construction du second robot}{8}
+\contentsline {subsection}{\numberline {3.2.1}Communication entre un PC et un Raspberry Pi}{8}
+\contentsline {subsection}{\numberline {3.2.2}Cam\IeC {\'e}ra}{9}
+\contentsline {chapter}{\numberline {4}Organisation}{11}
+\contentsline {section}{\numberline {4.1}PC}{11}
+\contentsline {paragraph}{Client.py}{11}
+\contentsline {paragraph}{GUI.py}{12}
+\contentsline {section}{\numberline {4.2}Raspberry Pi}{12}
+\contentsline {paragraph}{Server.py}{12}
+\contentsline {paragraph}{PiRobot.py}{13}
+\contentsline {section}{\numberline {4.3}Arduino}{13}
+\contentsline {paragraph}{ControlMotors.ino}{13}
+\contentsline {section}{\numberline {4.4}Informations suppl\IeC {\'e}mentaires}{13}
+\contentsline {paragraph}{Python 3}{13}
+\contentsline {paragraph}{Tkinter}{13}
+\contentsline {paragraph}{Socket}{13}
+\contentsline {paragraph}{Serial}{13}
+\contentsline {paragraph}{Logging}{14}
+\contentsline {paragraph}{Github}{14}
+\contentsline {chapter}{\numberline {5}Le programme en action !}{16}
+\contentsline {paragraph}{Arduino}{16}
+\contentsline {paragraph}{Raspberry Pi}{16}
+\contentsline {paragraph}{PC}{16}
+\contentsline {chapter}{\numberline {6}Conclusion}{18}
+\contentsline {chapter}{\numberline {A}Proc\IeC {\'e}dure d'installation}{19}
+\contentsline {section}{\numberline {A.1}Installation de Raspbian sur le Raspberry Pi}{19}
+\contentsline {section}{\numberline {A.2}Configurer le WiFi sur le Raspberry Pi}{20}
+\contentsline {chapter}{\numberline {B}Qui a fait quoi}{21}
+\contentsline {section}{\numberline {B.1}Rapha\IeC {\"e}l LEJEUNE}{21}
+\contentsline {paragraph}{Configuration}{21}
+\contentsline {paragraph}{Communication}{21}
+\contentsline {paragraph}{Interface}{21}
+\contentsline {paragraph}{Cam\IeC {\'e}ra}{21}
+\contentsline {paragraph}{PC}{21}
+\contentsline {paragraph}{Raspberry}{21}
+\contentsline {paragraph}{Arduino}{21}
+\contentsline {section}{\numberline {B.2}Maximilien POTTIEZ}{22}
+\contentsline {chapter}{\numberline {C}Sources}{23}

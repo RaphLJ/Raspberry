@@ -39,9 +39,9 @@ Nous avons imaginé le concept de \textbf{BotCop}, car la sécurité est devenu 
 
 Bien que de plus en plus d'habitations soient équipées de systèmes de surveillance électronique, ceux-ci ne sont pas toujours fiables. Ces systèmes sont généralement basés sur des capteurs de température et de mouvements, et peuvent se déclencher sans raison en été, lorsque les températures sont hautes.
 
-Les systèmes de surveillance avec caméra sont très couteux. Notre projet permettrait, en complément avec un système meilleur marché, d'obtenir des images en temps réel de notre maison.
+Les systèmes de surveillance avec caméra sont très couteux. Notre projet permettrait, en complément avec un système meilleur marché, d'obtenir des images en temps réel de la maison.
 
-Installer une caméra fixe n'est pas très utile, à moins de ne vouloir surveiller qu'une seule pièce. Il faut donc pouvoir déplacer cette caméra. Voilà donc pourquoi nous avons voulu créer un robot.
+Installer une caméra fixe n'est pas très utile, à moins de n'avoir qu'une seule pièce à surveiller. Il faut donc pouvoir déplacer cette caméra. Voilà donc pourquoi nous avons voulu créer un robot.
 
 Concrètement, BotCop pourra se déplacer dans toute la maison et renvoyer l'image filmée par sa caméra à l'utilisateur.
 
@@ -50,13 +50,30 @@ L'utilisateur pourra donc :
 \bigbreak
 \begin{itemize}
 \item Contrôler le robot pour le déplacer,
-\item Contrôler la caméra, pour pouvoir regarder dans n'importe quelle direction,
+\item Contrôler la caméra, pour pouvoir regarder partout dans n'importe quelle direction,
 \item Visionner graphiquement le trajet vu du dessus dans l'interface
 \end{itemize}
 
+\newpage
 
+We imagined the \textbf{BotCop} concept, because security became a central theme for modern houses. Actually, 75.000 burglaries occurred in 2012 and in 2013 in Belgium \footnote{From \url{https://www.besafe.be/fr/diw/belgi-belgique}, visited on 13 august 2015}.
 
-Faire en français et en anglais !
+Although more and more houses are equipped with electronic surveillance system, the latter are not always reliable. These systems usually are based on heat and movement sensors, and those can be triggered with no reason in the summer, when the temperatures are high.
+
+Camera based surveillance systems are expensive. Our project would allow to get an image from the house in real time, with a cheaper system.
+
+Set up a fixed camera is useless, unless there is only one room to monitor. This is why we need a mobile camera, and this is why we wanted to create a robot.
+
+Concretely, BotCop can move in the house, and send the image back to the user.
+
+The user will get the possiblity to :
+
+\bigbreak
+\begin{itemize}
+\item Control the robot to move it,
+\item Control the camera, to look everywhere in any direction,
+\item See a graphic representation of the path followed by the robot.
+\end{itemize}
 
 %\begin{figure}[hf!]
 %\center
@@ -260,6 +277,28 @@ Enfin, nous avons refait la même chose entre le PC et le Raspberry. Nous avons 
 \caption{Troisième étape}
 \end{figure}
 
+\subsection{Caméra}
+
+L'une des fonctionnalités principales du robot est de filmer et de renvoyer l'image en temps réel vers l'utilisateur.
+
+Nous avons utilisé une webcam, branchée sur un des ports USB du Raspberry. Le programme \textit{Motion} permettant alors d'envoyer l'image sur le réseau. L'utilisateur peut alors voir ces images, en entrant l'adresse IP du Raspberry, suivie du numéro du port. Nous avons configuré \textit{Motion} pour qu'il envoie sur le port 8081. L'adresse à entrer sur le navigateur est :
+
+\begin{verbatimtab}[3]
+192.168.1.50:8081
+\end{verbatimtab}
+
+Sur le kit que nous utilisons, un emplacement est prévu pour la picaméra, qui se connecte au Raspberry sur le port CSI (Camera Serial Interface)
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.2]{images/portCSI.png}
+\caption{Port CSI sur le Raspberry}
+\end{figure}
+
+Cette caméra présente toutefois un inconvénient : la nappe de câbles est trop courte, et si nous faisons faire des mouvements trop larges à la caméra (par exemple regarder à 90 degrés sur la gauche ou la droite), la nappe se détache du port.
+
+Puisque nous ne savons pas remplacer la nappe, nous avons inclus dans le programme \textit{ControlMotors.ino} une limite d'angle de 45 degrés à gauche et à droite par rapport à l'avant du robot.
+
 \chapter{Organisation}
 
 \begin{figure}[hf!]
@@ -295,6 +334,21 @@ GUI.buttonstop.bind("<Button-1>", buttonstopclick)
 \end{verbatimtab}
 
 Cette seconde option présente deux avantages : on peut choisir le type d'événement à associer (bouton cliqué ou relâché, ...), et on peut aussi supprimer ce lien (avec la commande \verb=unbind=).
+
+\begin{figure}[hf!]
+\center
+\includegraphics[scale=0.5]{images/Screen/Client2.png}
+\caption{Interface graphique}
+\end{figure}
+
+L'interface est divisée en quatre zones, ou \textit{frames} :
+
+\begin{itemize}
+\item[1] Contrôle du robot, pour le déplacer. Le robot continuera à avancer/tourner tant que le bouton est enfoncé, et s'arrête dès que le bouton est relâché.
+\item[2] Contrôle de la caméra, pour commander sa direction. Le bouton \verb=Reset= permet de remettre la caméra à son état initial, c'est-à-dire regarder droit devant le robot, à l'horizontale.
+\item[3] Bouton de connexion. Tant que la connexion avec le Raspberry n'est pas établie, ce bouton restera rouge, et les autres boutons seront désactivés. Une fois que la connexion est établie, le bouton devient vert, et les autres boutons deviennent actifs.
+\item[4] Visualisation du trajet. Chaque déplacement du robot peut être vu graphiquement sur cette zone. Pour réinitialiser le graphique, double-cliquez dessus.
+\end{itemize}
 
 \section{Raspberry Pi}
 
@@ -397,20 +451,17 @@ Ce n'est pas très intéressant d'avoir un robot relié à un écran avec un câ
 \caption{Configuraton de Putty}
 \end{figure}
 
-
-
-\chapter{Qui a fait quoi}
-
-Raphaël
-
-Recherches sur connexion socket
-
-Programme client, interface, programme serveur sur raspberry, connexion serial avec arduino
-Backup régulier des codes sur GitHub, ...
+\paragraph{PC} Enfin, démarrez sur le PC le programme \textit{Client.py}, et appuyez sur le bouton \verb=Connect= en bas à gauche.
 
 \chapter{Conclusion}
 
-Difficultés rencontrées, limitations, améliorations possibles, ...
+Ce projet nous a permis de découvrir et d'apprendre plusieurs choses : la programmation sur carte, la possibilité de contrôler un moteur à partir d'un programme, le langage Python, ... Mais aussi à organiser un programme quand celui-ci est en plusieurs parties. Il faut en effet avoir une vision globale de l'architecture logicielle pour pouvoir s'y retrouver.
+
+Gérer un timing a été le plus difficile dans ce projet, notamment à cause de nombreux imprévus (matériel défectueux, ...). De même, c'était pour nous la première fois que nous avons du travailler en équipe sur un projet d'informatique.
+
+Dans ce projet, nous avons surtout été limités par le matériel. Nous avons perdu beaucoup de temps pour nous rendre compte qu'un des composants ne fonctionne plus (cela nous est arrivé plusieurs fois). Un autre problème que nous avons eu est que le deuxième modèle de carte Arduino demande une tension supérieure à ce que la batterie peut fournir.
+
+Pour encore améliorer notre robot, on pourrait imaginer rajouter des fonctonnalités pour la caméra : possibilité d'enregistrer une image ou un film, et éventuellement de déclencher cet enregistrement si un mouvement quelconque est détecté. On pourrait ajouter une lampe (pour que le robot puisse filmer dans le noir).
 
 \appendix
 
@@ -556,5 +607,58 @@ sudo ifup wlan0
 \bigbreak
 \end{itemize}
 
-\end{document}
+\chapter{Qui a fait quoi}
 
+\section{Raphaël LEJEUNE}
+
+Lors de ce projet, je me suis occupé de la partie logicielle : j'ai effectué les recherches suivantes : 
+
+\paragraph{Configuration} Comment configurer le Raspberry pour qu'il puisse se connecter à internet. Il fallait aussi lui assigner une IP fixe, pour faciliter les communications avec la PC.
+
+\paragraph{Communication} Comment envoyer des informations depuis le PC vers le Raspberry, et depuis le Raspberry vers la carte Arduino. Ces recherches incluent aussi la compréhension des exemples trouvés sur internet, dans le but d'avoir une meilleure maitrise des programmes que j'écris.
+
+\paragraph{Interface} Comment créer une interface graphique en Python. Une fois Tkinter trouvé, le même travail de recherche, d'essais et de compréhension du fonctionnement du package a du être fait.
+
+\paragraph{Caméra} J'ai aussi mené quelques recherches pour la caméra, et pour récupérer l'image via le réseau.
+
+Après les travaux de recherche, j'ai écrit les trois programmes :
+
+\paragraph{PC} L'interface graphique : j'ai agencé les boutons pour avoir une fenêtre aussi organisée et logique que possible. J'ai aussi décidé que les messages envoyés seraient du type "FORWARD" ou "STOP".
+
+\paragraph{Raspberry} Le serveur : j'ai géré deux types de communication (Socket et Serial). J'ai placé tout ce qui concerne l'envoi vers la carte Arduino dans une classe séparée, tandis que dans le programme principal, j'ai utilisé le formatage de chaîne pour faciliter le travail sur la carte Arduino.
+
+\paragraph{Arduino} Ici mon travail a surtout été de récupérer la chaîne reçue du Raspberry, de la découper pour pouvoir envoyer les instructions aux moteurs.
+
+J'ai utilisé GitHub pour garder une trace de chaque étape que j'ai réalisée. Lors de la rédaction du rapport, j'ai rédigé toutes les parties consacrées au logiciel (organisation, procédures d'installation, ...)
+
+\section{Maximilien POTTIEZ}
+
+En ce qui me concerne , je me suis occupé de la recherche, de l'achat et du montage du matériel.
+Je me suis intéressé à l'électronique du projet et à la manipulation de Linux.
+J'ai appris à souder grâce à l'aide du service d'électronique. 
+De plus, il a fallu s'intéresser et comprendre de nombreux concepts et outils tels que les signaux PWM et leur fonctionnement à travers les contrôleurs.
+Le projet m'a permis de maitriser des éditeurs de texte comme vim ,le langage python et différentes de ses bibliothèques, de même que SSH et bien d'autres concepts utiles.
+De nombreuses directions furent prises lors de la conception de ce projet et beaucoup de concept appris ne se retrouvent pas dans le produit final tel que l'utilisation d'opencv, pygame et autres.
+
+\chapter{Sources}
+
+Voici la liste des sites internet que nous avons consultés pour ce projet
+
+\begin{itemize}
+\item http://www.dawnrobotics.co.uk/dagu-arduino-mini-driver-board/
+\item http://www.dawnrobotics.co.uk/dagu-arduino-mini-driver-mkii/
+\item http://blog.dawnrobotics.co.uk/2013/11/getting-started-with-the-dagu-arduino-mini-driver-board/
+\item http://blog.dawnrobotics.co.uk/2014/06/programming-raspberry-pi-robot-using-python-opencv/
+\item http://www.dawnrobotics.co.uk/raspberry-pi-camera-robot-chassis-bundle/
+\item http://blog.oscarliang.net/connect-raspberry-pi-and-arduino-usb-cable/
+\item http://stackoverflow.com/questions/20107700/serial-receiving-from-arduino-to-raspberry-pi-with-pyserial-stops-after-a-while
+\item https://www.raspberrypi.org/forums/viewtopic.php?t=50243\&p=389997
+\item https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
+\item http://lifehacker.com/how-to-clone-your-raspberry-pi-sd-card-for-super-easy-r-1261113524
+\item https://docs.python.org/3.2/library/socket.html
+\item http://www.robot-maker.com/forum/tutorials/article/78-rcerda-un-robot-raspberry-pi-pour-100-120/
+\item http://www.fred-j.org/?p=366
+\item http://lea-linux.org/documentations/Raspberry\_Pi
+\end{itemize}
+
+\end{document}
